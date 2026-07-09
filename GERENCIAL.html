@@ -2708,6 +2708,264 @@ body[data-theme="light"] .logout-btn{
   .kpi .v{font-size:22px}
 }
 
+
+/* ============================================================
+   REVISÃO GERENCIAL — SIDEBAR LIMPA
+   Sidebar limpa: botão Sair no rodapé.
+   ============================================================ */
+.updated{display:none !important}
+.logout-btn{
+  position:absolute !important;
+  left:50% !important;
+  bottom:18px !important;
+  transform:translateX(-50%) !important;
+  margin-top:0 !important;
+  width:58px !important;
+  min-height:30px !important;
+}
+
+/* ============================================================
+   REVISÃO GERENCIAL — FATURAMENTO EXECUTIVO
+   ============================================================ */
+body[data-theme="light"] #faturamento .table-pro td,
+body[data-theme="light"] #faturamento .table-pro .text-cell,
+body[data-theme="light"] #faturamento .table-pro .money-cell,
+body[data-theme="light"] #faturamento .table-pro .count-cell,
+body[data-theme="light"] #faturamento .table-pro .pct-cell{
+  font-weight:500 !important;
+  color:#26364d !important;
+}
+body[data-theme="light"] #faturamento .table-pro .text-cell{
+  color:#1f334f !important;
+}
+body[data-theme="light"] #faturamento .table-pro th{
+  font-weight:700 !important;
+}
+body[data-theme="light"] #faturamento .table-pro .trend-cell > span{
+  font-weight:700 !important;
+}
+.tick.up{color:var(--green)}
+.tick.down{color:var(--red)}
+.tick.flat{color:var(--blue)}
+.chart-tooltip .tt-neutral{color:var(--blue);font-weight:900}
+
+.fat-osc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.osc-col{padding:4px 2px}
+.osc-title{display:flex;align-items:center;gap:8px;font-weight:950;font-size:12px;text-transform:uppercase;letter-spacing:.35px;margin-bottom:10px;color:var(--text)}
+.osc-title .ico{width:19px;height:19px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:950}
+.osc-title.up .ico{background:#22d58522;color:var(--green);border:1px solid #22d58577}
+.osc-title.down .ico{background:#ff556622;color:var(--red);border:1px solid #ff556677}
+.osc-row{display:grid;grid-template-columns:minmax(0,1fr) 92px 112px;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}
+.osc-row:last-child{border-bottom:none}
+.osc-name{font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text)}
+.osc-var{text-align:right;font-weight:950;font-variant-numeric:tabular-nums}
+.osc-var.up{color:var(--green)}
+.osc-var.down{color:var(--red)}
+.osc-money{text-align:right;font-weight:850;font-variant-numeric:tabular-nums;color:var(--text)}
+body[data-theme="light"] .osc-name,
+body[data-theme="light"] .osc-money{font-weight:650;color:#26364d}
+
+.fat-history-panel{margin-top:13px}
+.history-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.history-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.history-tools label{font-size:10px;text-transform:uppercase;letter-spacing:.35px;color:var(--muted);font-weight:900;display:flex;align-items:center;gap:6px}
+.history-tools select{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:8px 10px;font-weight:800;outline:none}
+.history-cards{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:12px}
+@media(max-width:1100px){
+  .fat-osc-grid{grid-template-columns:1fr}
+  .history-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+
+/* ============================================================
+   REVISÃO CEO PRO — FATURAMENTO HISTÓRICO E VARIAÇÃO ESTÁVEL
+   ============================================================ */
+.tick.flat{color:var(--blue)!important;background:transparent!important;font-weight:900}
+body[data-theme="light"] .tick.flat{color:#0969da!important;background:transparent!important}
+.history-bars{display:grid;gap:10px;margin-top:4px}
+.history-bar{display:grid;grid-template-columns:54px minmax(0,1fr) 130px 78px;gap:10px;align-items:center;font-size:11px;border-bottom:1px solid var(--line);padding:7px 0}
+.history-bar:last-child{border-bottom:none}
+.history-bar b{font-weight:900;color:var(--text)}
+.history-track{height:14px;border-radius:999px;background:#1b2942;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+.history-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--wick),var(--blue));min-width:3px}
+.history-money{text-align:right;font-weight:850;font-variant-numeric:tabular-nums;color:var(--text)}
+.history-var{text-align:right;font-weight:950;font-variant-numeric:tabular-nums}
+.history-var.up{color:var(--green)}.history-var.down{color:var(--red)}.history-var.neutral{color:var(--blue)}
+.history-month-grid{display:grid;gap:9px;margin-top:2px}
+.history-month-row{display:grid;grid-template-columns:42px minmax(0,1fr) 78px;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:6px 0}
+.history-month-row:last-child{border-bottom:none}
+.history-month-row b{font-weight:900;color:var(--text)}
+.history-month-bars{display:grid;gap:4px}
+.history-month-line{height:13px;border-radius:999px;background:#1b2942;position:relative;overflow:hidden}
+.history-month-line .fill{height:100%;border-radius:999px;min-width:2px}
+.history-month-line.prev .fill{background:linear-gradient(90deg,#7e8da8,#a8b4c9)}
+.history-month-line.current .fill{background:linear-gradient(90deg,var(--wick),var(--blue))}
+.history-month-line span{position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:8.6px;font-weight:850;color:#eaf1fc;text-shadow:0 1px 2px rgba(0,0,0,.55)}
+body[data-theme="light"] .history-track,body[data-theme="light"] .history-month-line{background:#dce8f6}
+body[data-theme="light"] .history-month-line span{color:#102033;text-shadow:none}
+body[data-theme="light"] #faturamento .table-pro td,body[data-theme="light"] #faturamento .table-pro .money-cell,body[data-theme="light"] #faturamento .table-pro .text-cell{font-weight:520!important;color:#24344b!important}
+body[data-theme="light"] #faturamento .table-pro th{font-weight:750!important;color:#53677f!important}
+
+
+/* Correção TI — Faturamento ticker/top clientes */
+.ticker:hover .ticker-track{animation-play-state:paused}
+.tick.has-tip{cursor:help}
+.table-fat-top tbody tr td{font-weight:650}
+body[data-theme="light"] .table-fat-top tbody tr td,
+body[data-theme="light"] .table-fat-top .money-cell{font-weight:600}
+
+
+/* Correção TI — hover do botão Sair no modo claro */
+body[data-theme="light"] .logout-btn:hover{
+  color:#ffffff !important;
+  border-color:#8f53ff !important;
+  background:rgba(143,83,255,.92) !important;
+  box-shadow:0 0 16px rgba(143,83,255,.35) !important;
+}
+
+
+/* Correção TI — ticker de faturamento sem preenchimento exclusivo no neutro */
+.ticker .tick,
+body[data-theme="light"] .ticker .tick{
+  background:transparent !important;
+}
+.ticker .tick.up{color:var(--green) !important}
+.ticker .tick.down{color:var(--red) !important}
+.ticker .tick.flat{color:var(--blue) !important}
+body[data-theme="light"] .ticker .tick.up{color:#078b55 !important}
+body[data-theme="light"] .ticker .tick.down{color:#c91f37 !important}
+body[data-theme="light"] .ticker .tick.flat{color:#0969da !important}
+.ticker .tick:hover,
+body[data-theme="light"] .ticker .tick:hover{
+  background:rgba(125,189,255,.10) !important;
+}
+
+
+/* ============================================================
+   REVISÃO VISUAL GLOBAL — REDUÇÃO DE NEGRITO EM TODAS AS ABAS
+   Mantém títulos/alertas executivos fortes, mas deixa dados,
+   tabelas, rankings, barras e cards com leitura mais limpa.
+   ============================================================ */
+.card .label,
+.kpi .label,
+.map-kpi .mk-label,
+.projection-metric span,
+.table-pro th,
+.diag-kicker,
+.box h3,
+.osc-title,
+.history-head h3{
+  font-weight:700 !important;
+}
+
+.card .val,
+.kpi .v,
+.projection-metric strong,
+.map-kpi .mk-val,
+.history-money,
+.osc-money,
+.money-cell,
+.count-cell,
+.pct-cell,
+.table-pro .num,
+.hbar span,
+.uf-rank-val{
+  font-weight:700 !important;
+}
+
+.table-pro td,
+.table-pro .text-cell,
+.rank-row .rname,
+.osc-name,
+.hbar b,
+.history-bar b,
+.history-month-row b,
+.uf-rank-name,
+.map-caption,
+.chart-note{
+  font-weight:600 !important;
+}
+
+.rank-row .rval,
+.rank-row .rdelta,
+.trend-cell > span,
+.variation-text,
+.history-var,
+.osc-var,
+.tick,
+.tag,
+.pill,
+.btn,
+.select,
+.logout-btn{
+  font-weight:700 !important;
+}
+
+.diag-text,
+.diag-summary,
+.diag-action .txt,
+.card .sub,
+.kpi .sub,
+.projection-metric small,
+.map-kpi .mk-sub,
+.table-pro td{
+  letter-spacing:0 !important;
+}
+
+/* Modo claro: remover aspecto “pesado” em todas as abas, não só Faturamento */
+body[data-theme="light"] .table-pro td,
+body[data-theme="light"] .table-pro .text-cell,
+body[data-theme="light"] .rank-row .rname,
+body[data-theme="light"] .osc-name,
+body[data-theme="light"] .hbar b,
+body[data-theme="light"] .history-bar b,
+body[data-theme="light"] .history-month-row b{
+  font-weight:550 !important;
+  color:#21344f !important;
+}
+
+body[data-theme="light"] .table-pro th,
+body[data-theme="light"] .box h3,
+body[data-theme="light"] .card .label,
+body[data-theme="light"] .kpi .label,
+body[data-theme="light"] .diag-kicker{
+  font-weight:650 !important;
+  color:#50617a !important;
+}
+
+body[data-theme="light"] .card .val,
+body[data-theme="light"] .kpi .v,
+body[data-theme="light"] .money-cell,
+body[data-theme="light"] .count-cell,
+body[data-theme="light"] .pct-cell,
+body[data-theme="light"] .table-pro .num,
+body[data-theme="light"] .rank-row .rval,
+body[data-theme="light"] .projection-metric strong,
+body[data-theme="light"] .history-money,
+body[data-theme="light"] .osc-money{
+  font-weight:650 !important;
+  color:#142033 !important;
+}
+
+body[data-theme="light"] .rank-row .rdelta,
+body[data-theme="light"] .trend-cell > span,
+body[data-theme="light"] .variation-text,
+body[data-theme="light"] .history-var,
+body[data-theme="light"] .osc-var{
+  font-weight:650 !important;
+}
+
+/* Preservar impacto visual somente onde é título principal ou ação crítica */
+.title h1,
+.brand,
+.login-title,
+.diag-action .urgency,
+.diag-status,
+.nav button.active,
+.nav button .lbl{
+  font-weight:850 !important;
+}
+
 </style>
 </head>
 <body data-theme="dark" data-active-tab="parque" class="login-locked">
@@ -2743,7 +3001,6 @@ body[data-theme="light"] .logout-btn{
     <button data-tab="cancel" title="Cancelados"><span>✖</span><span class="lbl">Cancel.</span></button>
   </div>
   <button class="logout-btn" id="logoutBtn" title="Sair do Gerencial">Sair</button>
-  <div class="updated">Atualizado até<b id="upd">--</b></div>
 </aside>
 <main class="main">
   <div class="top">
@@ -2830,18 +3087,32 @@ body[data-theme="light"] .logout-btn{
     <div class="detail-section" id="fatDetail">
       <div class="grid cards" id="fatCards"></div>
       <div class="projection-box" id="fatProjectionBox"></div>
+      <div class="box fat-history-panel" id="fatHistoryPanel">
+        <div class="history-head">
+          <h3>Histórico de faturamento <span class="tag">todos os anos disponíveis</span></h3>
+          <div class="history-tools">
+            <label>Ano <select id="fatHistYearSelect"></select></label>
+            <label>Mês <select id="fatHistMonthSelect"></select></label>
+          </div>
+        </div>
+        <div class="grid cards history-cards" id="fatHistoryCards"></div>
+        <div class="grid row2 fat-history-charts">
+          <div class="box"><h3>Faturamento por ano <span class="tag">histórico</span></h3><div id="fatAnnualBars" class="history-bars"></div></div>
+          <div class="box"><h3>Comparativo mensal por ano <span class="tag" id="fatMonthCompareTag">ano selecionado vs anterior</span></h3><div id="fatMonthCompareBars" class="history-month-grid"></div></div>
+        </div>
+      </div>
       <div class="grid row2" style="margin-top:13px">
-        <div class="box"><h3>Faturamento mensal — 2025 vs 2026</h3>
+        <div class="box"><h3>Faturamento mensal — comparativo anual</h3>
           <div class="chart-wrap tall"><canvas id="fatChart"></canvas></div>
           <div style="font-size:10px;color:var(--muted);margin-top:6px">Linha clara: 2025 · Linha azul: 2026</div>
         </div>
         <div class="box"><h3>Faturamento por tipo</h3><div class="chart-wrap"><canvas id="fatTipoChart"></canvas></div></div>
       </div>
-      <div class="box"><h3>Relação completa de faturados <span class="tag">Junho vs Maio</span></h3>
-        <div class="tblwrap"><table class="table-pro table-fat"><colgroup><col><col><col><col></colgroup><thead><tr><th>Cliente</th><th class="num">Atual</th><th class="num">Anterior</th><th class="num">Variação</th></tr></thead>
-        <tbody id="fatTable"></tbody></table></div>
+
+      <div class="box fat-osc-box"><h3>Maiores oscilações de faturamento <span class="tag" id="fatOscTag">mês atual vs anterior</span></h3>
+        <div class="fat-osc-grid" id="fatOscillations"></div>
       </div>
-      <div class="box"><h3>Top clientes 2026</h3>
+      <div class="box"><h3>Top clientes do ano atual</h3>
         <div class="tblwrap"><table class="table-pro table-fat-top"><colgroup><col><col></colgroup><thead><tr><th>Cliente</th><th class="num">Faturamento</th></tr></thead>
         <tbody id="fatTopTable"></tbody></table></div>
       </div>
@@ -2944,7 +3215,7 @@ body[data-theme="light"] .logout-btn{
 // =====================================================================
 // DADOS (consolidado OMIE + BAZONA + Vendas — referência Junho/2026)
 // =====================================================================
-const DATA={"meta":{"updated":"08/07/2026","generated":"08/07/2026","source":"ETL Diário HTML · OMIE + BAZONA + Relatório de Vendas","etlVersion":"GERENCIAL_ETL_SIMULADO_PY_v2","periodos":{"parque":"Julho/2026","faturamento":"Junho/2026","vendas":"Julho/2026","inad":"Julho/2026","cancel":"Julho/2026"}},"parque":{"kpis":{"total":7578,"comCliente":4998,"comClientePct":65.95407759303247,"estoque":2580,"estoquePct":34.04592240696754,"estoqueBloqueado":67,"estoqueAtivoBloqueavel":849,"estoqueNaoBloqueavel":1731,"custoEstoque":80175.156,"custoTotal":225057.864,"valorFaturado":288371.005,"lucro":143488.297,"margem":49.75822621279139},"status":[{"label":"Ativo","value":7300.0,"count":7300,"key":"Ativo"},{"label":"Cancelado","value":160.0,"count":160,"key":"Cancelado"},{"label":"Bloqueio parcial","value":67.0,"count":67,"key":"Bloqueio parcial"},{"label":"Suspenso","value":48.0,"count":48,"key":"Suspenso"},{"label":"Suspensa Voluntário Gratuita","value":3.0,"count":3,"key":"Suspensa Voluntário Gratuita"}],"operadora":[{"label":"TIM","value":3134.0,"count":3134,"key":"TIM"},{"label":"VIVO","value":1465.0,"count":1465,"key":"VIVO"},{"label":"CLARO","value":399.0,"count":399,"key":"CLARO"}],"empresa":[{"label":"WICK GESTÃO","value":2191,"valor":132196.9509999982},{"label":"MOVE","value":2009,"valor":105003.88999999843},{"label":"GRITE ALTO","value":798,"valor":51170.16400000052}],"empresaOmie":[{"value":2191,"valor":132196.9509999982,"key":"WICK","label":"WICK GESTÃO"},{"value":2009,"valor":105003.88999999843,"key":"MOVE","label":"MOVE"},{"value":798,"valor":51170.16400000052,"key":"GRITE","label":"GRITE ALTO"}],"clientes":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","linhas":269,"faturamento":23049.69000000005,"ticket":85.68657992565075},{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","linhas":214,"faturamento":8585.069999999965,"ticket":40.117149532710116},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","linhas":171,"faturamento":6525.499999999982,"ticket":38.16081871345018},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","linhas":145,"faturamento":5495.499999999994,"ticket":37.899999999999956},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","linhas":143,"faturamento":5786.42999999999,"ticket":40.46454545454539},{"cliente":"STA MAQUINAS LTDA","linhas":126,"faturamento":5428.009999999994,"ticket":43.0794444444444},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","linhas":111,"faturamento":7181.4500000000135,"ticket":64.69774774774787},{"cliente":"ASSOCIACAO MULTIPLA DE PROTECAO E ASSISTENCIA AUT","linhas":107,"faturamento":4478.749999999988,"ticket":41.857476635513905},{"cliente":"BELMA INDUSTRIAL DE GENEROS ALIMENTICIOS LTDA","linhas":104,"faturamento":3194.220000000006,"ticket":30.713653846153907},{"cliente":"LONA CONSTRUTORA LTDA","linhas":93,"faturamento":6925.380000000001,"ticket":74.46645161290324},{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","linhas":92,"faturamento":5680.889999999994,"ticket":61.748804347826024},{"cliente":"LEGACY IOT LTDA","linhas":86,"faturamento":5629.399999999995,"ticket":65.45813953488367},{"cliente":"DISTRIBUIDORA CENTRAL PRODUTOS ALIMENTICIOS LTDA","linhas":82,"faturamento":3067.4799999999973,"ticket":37.4082926829268},{"cliente":"ASSOCIACAO DE COMBATE AO CANCER EM GOIAS","linhas":80,"faturamento":3192.0000000000045,"ticket":39.900000000000055},{"cliente":"ASSOCIACAO COMERCIAL E INDUSTRIAL DE ANAPOLIS","linhas":74,"faturamento":3231.7700000000036,"ticket":43.67256756756762}],"ufs":[{"label":"GO","value":4364.0,"count":4364,"key":"GO"},{"label":"SP","value":165.0,"count":165,"key":"SP"},{"label":"DF","value":95.0,"count":95,"key":"DF"},{"label":"TO","value":74.0,"count":74,"key":"TO"},{"label":"RO","value":71.0,"count":71,"key":"RO"},{"label":"CE","value":60.0,"count":60,"key":"CE"},{"label":"MS","value":38.0,"count":38,"key":"MS"},{"label":"MG","value":35.0,"count":35,"key":"MG"},{"label":"MT","value":28.0,"count":28,"key":"MT"},{"label":"MA","value":16.0,"count":16,"key":"MA"},{"label":"AC","value":12.0,"count":12,"key":"AC"},{"label":"PA","value":10.0,"count":10,"key":"PA"},{"label":"RJ","value":6.0,"count":6,"key":"RJ"},{"label":"PR","value":5.0,"count":5,"key":"PR"},{"label":"PI","value":5.0,"count":5,"key":"PI"},{"label":"RS","value":4.0,"count":4,"key":"RS"},{"label":"SC","value":3.0,"count":3,"key":"SC"},{"label":"RR","value":2.0,"count":2,"key":"RR"},{"label":"BA","value":2.0,"count":2,"key":"BA"},{"label":"PE","value":1.0,"count":1,"key":"PE"},{"label":"ES","value":1.0,"count":1,"key":"ES"},{"label":"PB","value":1.0,"count":1,"key":"PB"}],"anterior":{"periodo":"07/07/2026","comCliente":5001,"estoque":2853,"custoTotal":230334.72,"valorFaturado":288672.705,"estoqueAtivoBloqueavel":895},"kpisByEmpresa":{"WICK":{"comCliente":2191,"valorFaturado":132196.951,"pctBase":43.8375350140056,"semUf":0},"MOVE":{"comCliente":2009,"valorFaturado":105003.89,"pctBase":40.19607843137255,"semUf":0},"GRITE":{"comCliente":798,"valorFaturado":51170.164,"pctBase":15.966386554621847,"semUf":0}},"clientesByEmpresa":{"WICK":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","linhas":269,"faturamento":23049.69000000005,"ticket":85.68657992565075},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","linhas":171,"faturamento":6525.499999999982,"ticket":38.16081871345018},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","linhas":111,"faturamento":7181.4500000000135,"ticket":64.69774774774787},{"cliente":"BELMA INDUSTRIAL DE GENEROS ALIMENTICIOS LTDA","linhas":104,"faturamento":3194.220000000006,"ticket":30.713653846153907},{"cliente":"ASSOCIACAO DE COMBATE AO CANCER EM GOIAS","linhas":80,"faturamento":3192.0000000000045,"ticket":39.900000000000055},{"cliente":"BATERIAS PERIM LTDA","linhas":72,"faturamento":3253.109999999998,"ticket":45.1820833333333},{"cliente":"BEAUVALLET GOIAS ALIMENTOS LTDA","linhas":64,"faturamento":3592.0600000000004,"ticket":56.125937500000006},{"cliente":"METALFORTE INDUSTRIA METALURGICA LTDA","linhas":53,"faturamento":2347.3799999999987,"ticket":44.29018867924526},{"cliente":"FRIOCENTER PESCADOS INDUSTRIA E  COMERCIO, IMPORTAÇÃO E EXPO","linhas":47,"faturamento":2151.860000000001,"ticket":45.78425531914896},{"cliente":"FLASH LOG COMERCIO E DISTRIBUICAO LTDA","linhas":45,"faturamento":2231.860000000001,"ticket":49.59688888888891},{"cliente":"CDA ALIMENTOS S.A. EM RECUPERACAO JUDICIAL","linhas":44,"faturamento":2104.690000000001,"ticket":47.83386363636366},{"cliente":"MINISTERIO FAMILY CHURCH","linhas":35,"faturamento":3115.5300000000016,"ticket":89.0151428571429},{"cliente":"PACHECO MATERIAIS PARA CONSTRUCAO LTDA","linhas":34,"faturamento":1813.550000000001,"ticket":53.33970588235297},{"cliente":"BRASIL COMPONENTES AUTOMOTIVOS LTDA","linhas":32,"faturamento":1800.3300000000002,"ticket":56.260312500000005},{"cliente":"NUTRIAL INSUMOS AGROPECUARIOS LTDA","linhas":29,"faturamento":1367.1000000000004,"ticket":47.14137931034484}],"MOVE":[{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","linhas":214,"faturamento":8585.069999999965,"ticket":40.117149532710116},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","linhas":145,"faturamento":5495.499999999994,"ticket":37.899999999999956},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","linhas":143,"faturamento":5786.42999999999,"ticket":40.46454545454539},{"cliente":"STA MAQUINAS LTDA","linhas":126,"faturamento":5428.009999999994,"ticket":43.0794444444444},{"cliente":"ASSOCIACAO MULTIPLA DE PROTECAO E ASSISTENCIA AUT","linhas":107,"faturamento":4478.749999999988,"ticket":41.857476635513905},{"cliente":"LONA CONSTRUTORA LTDA","linhas":93,"faturamento":6925.380000000001,"ticket":74.46645161290324},{"cliente":"DISTRIBUIDORA CENTRAL PRODUTOS ALIMENTICIOS LTDA","linhas":82,"faturamento":3067.4799999999973,"ticket":37.4082926829268},{"cliente":"ASSOCIACAO COMERCIAL E INDUSTRIAL DE ANAPOLIS","linhas":74,"faturamento":3231.7700000000036,"ticket":43.67256756756762},{"cliente":"LC ENCOMENDAS E CARGAS LTDA","linhas":72,"faturamento":3937.800000000004,"ticket":54.69166666666672},{"cliente":"AGORA MEDIO LTDA","linhas":66,"faturamento":2653.4000000000033,"ticket":40.20303030303035},{"cliente":"ARMAZEM DA DECORACAO LTDA","linhas":51,"faturamento":3670.040000000005,"ticket":71.96156862745107},{"cliente":"RECICLAR RECICLAGEM DE MATERIAIS LTDA","linhas":45,"faturamento":2303.500000000002,"ticket":51.18888888888893},{"cliente":"INSTITUTO DO CORACAO SAO LUCAS LTDA","linhas":45,"faturamento":3459.3000000000015,"ticket":76.87333333333336},{"cliente":"PAX CLINICA PSIQUIATRICA LTDA","linhas":44,"faturamento":2191.6000000000017,"ticket":49.80909090909095},{"cliente":"TRANSPORTADORA EXPRESSO GOIÁS LTDA","linhas":43,"faturamento":1590.7000000000007,"ticket":36.99302325581397}],"GRITE":[{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","linhas":92,"faturamento":5680.889999999994,"ticket":61.748804347826024},{"cliente":"LEGACY IOT LTDA","linhas":86,"faturamento":5629.399999999995,"ticket":65.45813953488367},{"cliente":"COALUMAQ COMERCIO DE COMPRESSORES LTDA","linhas":43,"faturamento":2748.05,"ticket":63.90813953488372},{"cliente":"IGREJA EVANGELICA ASSEMBLEIA DE DEUS - MINISTERIO VILA NOVA","linhas":43,"faturamento":4598.264000000001,"ticket":106.93637209302328},{"cliente":"GOVIDROS COMERCIAL GOIANIA DE VIDROS LTDA","linhas":34,"faturamento":2352.38,"ticket":69.18764705882353},{"cliente":"MARMORARTE -MARMORES E GRANITOS LTDA","linhas":22,"faturamento":1236.8,"ticket":56.21818181818182},{"cliente":"SAO MIGUEL INCORPORACOES E PARTICIPACOES SA","linhas":18,"faturamento":633.1999999999998,"ticket":35.17777777777777},{"cliente":"NASA VEICULOS LTDA","linhas":14,"faturamento":608.5999999999999,"ticket":43.47142857142857},{"cliente":"MVP ENTREGAS RAPIDAS LTDA","linhas":13,"faturamento":388.69999999999993,"ticket":29.899999999999995},{"cliente":"MMCS VENDAS LTDA","linhas":13,"faturamento":492.6999999999999,"ticket":37.89999999999999},{"cliente":"ELLUS CONSTRUTORA E INCORPORADORA LTDA","linhas":12,"faturamento":1208.8000000000002,"ticket":100.73333333333335},{"cliente":"JGS SOLUCOES E SERVICOS DE TECNOLOGIA LTDA","linhas":11,"faturamento":598.8999999999999,"ticket":54.44545454545453},{"cliente":"ALIA PROTECAO E BENEFICIOS","linhas":11,"faturamento":328.9,"ticket":29.9},{"cliente":"BASE VEICULOS LTDA","linhas":10,"faturamento":398.99999999999994,"ticket":39.89999999999999},{"cliente":"SPE EPOCA JD. AMERICA EMPREENDIMENTOS LTDA","linhas":10,"faturamento":398.99999999999994,"ticket":39.89999999999999}]},"ufsByEmpresa":{"WICK":[{"label":"GO","value":1957.0,"count":1957,"key":"GO"},{"label":"SP","value":77.0,"count":77,"key":"SP"},{"label":"TO","value":59.0,"count":59,"key":"TO"},{"label":"DF","value":45.0,"count":45,"key":"DF"},{"label":"MS","value":15.0,"count":15,"key":"MS"},{"label":"MG","value":8.0,"count":8,"key":"MG"},{"label":"PA","value":7.0,"count":7,"key":"PA"},{"label":"MA","value":5.0,"count":5,"key":"MA"},{"label":"RJ","value":4.0,"count":4,"key":"RJ"},{"label":"MT","value":3.0,"count":3,"key":"MT"},{"label":"SC","value":3.0,"count":3,"key":"SC"},{"label":"PR","value":3.0,"count":3,"key":"PR"},{"label":"RS","value":2.0,"count":2,"key":"RS"},{"label":"CE","value":1.0,"count":1,"key":"CE"},{"label":"PE","value":1.0,"count":1,"key":"PE"},{"label":"BA","value":1.0,"count":1,"key":"BA"}],"MOVE":[{"label":"GO","value":1711.0,"count":1711,"key":"GO"},{"label":"RO","value":71.0,"count":71,"key":"RO"},{"label":"CE","value":54.0,"count":54,"key":"CE"},{"label":"DF","value":41.0,"count":41,"key":"DF"},{"label":"SP","value":39.0,"count":39,"key":"SP"},{"label":"MG","value":27.0,"count":27,"key":"MG"},{"label":"MT","value":23.0,"count":23,"key":"MT"},{"label":"TO","value":12.0,"count":12,"key":"TO"},{"label":"AC","value":12.0,"count":12,"key":"AC"},{"label":"MS","value":11.0,"count":11,"key":"MS"},{"label":"MA","value":2.0,"count":2,"key":"MA"},{"label":"PA","value":2.0,"count":2,"key":"PA"},{"label":"RS","value":1.0,"count":1,"key":"RS"},{"label":"PR","value":1.0,"count":1,"key":"PR"},{"label":"PI","value":1.0,"count":1,"key":"PI"},{"label":"RJ","value":1.0,"count":1,"key":"RJ"}],"GRITE":[{"label":"GO","value":696.0,"count":696,"key":"GO"},{"label":"SP","value":49.0,"count":49,"key":"SP"},{"label":"MS","value":12.0,"count":12,"key":"MS"},{"label":"DF","value":9.0,"count":9,"key":"DF"},{"label":"MA","value":9.0,"count":9,"key":"MA"},{"label":"CE","value":5.0,"count":5,"key":"CE"},{"label":"PI","value":4.0,"count":4,"key":"PI"},{"label":"TO","value":3.0,"count":3,"key":"TO"},{"label":"MT","value":2.0,"count":2,"key":"MT"},{"label":"RR","value":2.0,"count":2,"key":"RR"},{"label":"PR","value":1.0,"count":1,"key":"PR"},{"label":"PA","value":1.0,"count":1,"key":"PA"},{"label":"RS","value":1.0,"count":1,"key":"RS"},{"label":"RJ","value":1.0,"count":1,"key":"RJ"},{"label":"ES","value":1.0,"count":1,"key":"ES"},{"label":"PB","value":1.0,"count":1,"key":"PB"},{"label":"BA","value":1.0,"count":1,"key":"BA"}]},"operadoraByEmpresa":{"WICK":[{"label":"TIM","value":1234.0,"count":1234,"key":"TIM"},{"label":"VIVO","value":708.0,"count":708,"key":"VIVO"},{"label":"CLARO","value":249.0,"count":249,"key":"CLARO"}],"MOVE":[{"label":"TIM","value":1305.0,"count":1305,"key":"TIM"},{"label":"VIVO","value":597.0,"count":597,"key":"VIVO"},{"label":"CLARO","value":107.0,"count":107,"key":"CLARO"}],"GRITE":[{"label":"TIM","value":595.0,"count":595,"key":"TIM"},{"label":"VIVO","value":160.0,"count":160,"key":"VIVO"},{"label":"CLARO","value":43.0,"count":43,"key":"CLARO"}]},"statusContratoByEmpresa":{"WICK":[{"label":"Ativo","value":1995.0,"count":1995,"key":"Ativo"},{"label":"Suspenso","value":196.0,"count":196,"key":"Suspenso"}],"MOVE":[{"label":"Ativo","value":1800.0,"count":1800,"key":"Ativo"},{"label":"Suspenso","value":209.0,"count":209,"key":"Suspenso"}],"GRITE":[{"label":"Ativo","value":787.0,"count":787,"key":"Ativo"},{"label":"Suspenso","value":11.0,"count":11,"key":"Suspenso"}]},"clientesResumo":{"geral":{"total":826,"pf":623,"pj":203},"empresa":{"WICK":{"total":378,"pf":286,"pj":92},"MOVE":{"total":240,"pf":183,"pj":57},"GRITE ALTO":{"total":210,"pf":155,"pj":55}},"operadora":{"TIM":{"total":619,"pf":450,"pj":169},"VIVO":{"total":227,"pf":152,"pj":75},"CLARO":{"total":112,"pf":75,"pj":37}},"empresaOperadora":{"WICK":{"TIM":{"total":236,"pf":160,"pj":76},"VIVO":{"total":139,"pf":101,"pj":38},"CLARO":{"total":83,"pf":63,"pj":20}},"MOVE":{"TIM":{"total":199,"pf":153,"pj":46},"VIVO":{"total":59,"pf":36,"pj":23},"CLARO":{"total":15,"pf":5,"pj":10}},"GRITE ALTO":{"TIM":{"total":185,"pf":138,"pj":47},"VIVO":{"total":30,"pf":15,"pj":15},"CLARO":{"total":14,"pf":7,"pj":7}}}}},"vendas":{"kpis":{"ano":2026,"mesReferencia":"Jul","qtdYtd":770.0,"valorYtd":47424.32,"contratosYtd":340,"ticket":61.59002597402598,"qtdMes":9.0,"valorMes":501.32000000000005,"qtdMesAnterior":36.0,"varMes":-75.0,"refMonth":7},"mensal":[{"mes":"Jan","qtd":103.0,"valor":5992.67,"contratos":50},{"mes":"Fev","qtd":120.0,"valor":7970.55,"contratos":66},{"mes":"Mar","qtd":211.0,"valor":12353.51,"contratos":80},{"mes":"Abr","qtd":101.0,"valor":7063.360000000001,"contratos":53},{"mes":"Mai","qtd":190.0,"valor":10676.51,"contratos":53},{"mes":"Jun","qtd":36.0,"valor":2866.4,"contratos":31},{"mes":"Jul","qtd":9.0,"valor":501.32000000000005,"contratos":7}],"consultores":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":255.0,"valor":17973.99,"pct":33.116883116883116,"pctLinhas":33.116883116883116,"ticket":70.48623529411765,"tipos":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}],"tipo":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":232.0,"valor":11798.45,"pct":30.129870129870127,"pctLinhas":30.129870129870127,"ticket":50.855387931034485,"tipos":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}],"tipo":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":125.0,"valor":8471.130000000001,"pct":16.233766233766232,"pctLinhas":16.233766233766232,"ticket":67.76904,"tipos":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}],"tipo":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}]},{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":94.0,"valor":5538.16,"pct":12.207792207792208,"pctLinhas":12.207792207792208,"ticket":58.91659574468085,"tipos":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}],"tipo":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}]},{"consultor":"EMILLY DE OLIVEIRA MARÇAL","linhas":64.0,"valor":3642.59,"pct":8.311688311688311,"pctLinhas":8.311688311688311,"ticket":56.91546875,"tipos":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}],"tipo":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}]}],"tipo":[{"label":"LN","value":338.0,"valor":22223.08},{"label":"RN","value":298.0,"valor":17357.72},{"label":"PN","value":86.0,"valor":4398.7},{"label":"TT INTERNA","value":35.0,"valor":2616.12},{"label":"TT","value":13.0,"valor":828.7}],"operadora":[{"label":"TIM","value":519.0,"count":316,"key":"TIM"},{"label":"VIVO","value":186.0,"count":53,"key":"VIVO"},{"label":"CLARO","value":65.0,"count":25,"key":"CLARO"}],"consultoresDetalhe":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":255.0,"valor":17973.99,"pct":33.116883116883116,"pctLinhas":33.116883116883116,"ticket":70.48623529411765,"tipos":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}],"tipo":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":232.0,"valor":11798.45,"pct":30.129870129870127,"pctLinhas":30.129870129870127,"ticket":50.855387931034485,"tipos":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}],"tipo":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":125.0,"valor":8471.130000000001,"pct":16.233766233766232,"pctLinhas":16.233766233766232,"ticket":67.76904,"tipos":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}],"tipo":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}]},{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":94.0,"valor":5538.16,"pct":12.207792207792208,"pctLinhas":12.207792207792208,"ticket":58.91659574468085,"tipos":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}],"tipo":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}]},{"consultor":"EMILLY DE OLIVEIRA MARÇAL","linhas":64.0,"valor":3642.59,"pct":8.311688311688311,"pctLinhas":8.311688311688311,"ticket":56.91546875,"tipos":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}],"tipo":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}]}],"consultoresByMes":{"Jan":[{"consultor":"EMILLY DE OLIVEIRA MARÇAL","linhas":64.0,"valor":3642.59,"pct":62.13592233009708,"pctLinhas":62.13592233009708,"ticket":56.91546875,"tipos":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}],"tipo":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}]},{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":36.0,"valor":2185.38,"pct":34.95145631067961,"pctLinhas":34.95145631067961,"ticket":60.705000000000005,"tipos":[{"label":"LN","value":31.0,"valor":1765.88},{"label":"RN","value":4.0,"valor":389.6},{"label":"TT","value":1.0,"valor":29.9}],"tipo":[{"label":"LN","value":31.0,"valor":1765.88},{"label":"RN","value":4.0,"valor":389.6},{"label":"TT","value":1.0,"valor":29.9}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":3.0,"valor":164.7,"pct":2.912621359223301,"pctLinhas":2.912621359223301,"ticket":54.9,"tipos":[{"label":"PN","value":3.0,"valor":164.7}],"tipo":[{"label":"PN","value":3.0,"valor":164.7}]}],"Fev":[{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":58.0,"valor":3352.78,"pct":48.333333333333336,"pctLinhas":48.333333333333336,"ticket":57.80655172413793,"tipos":[{"label":"LN","value":30.0,"valor":1985.1000000000001},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":6.0,"valor":299.49},{"label":"TT INTERNA","value":2.0,"valor":189.89},{"label":"TT","value":1.0,"valor":69.9}],"tipo":[{"label":"LN","value":30.0,"valor":1985.1000000000001},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":6.0,"valor":299.49},{"label":"TT INTERNA","value":2.0,"valor":189.89},{"label":"TT","value":1.0,"valor":69.9}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":42.0,"valor":2909.77,"pct":35.0,"pctLinhas":35.0,"ticket":69.28023809523809,"tipos":[{"label":"LN","value":24.0,"valor":1586.57},{"label":"RN","value":11.0,"valor":733.9},{"label":"PN","value":4.0,"valor":379.6},{"label":"TT","value":3.0,"valor":209.70000000000002}],"tipo":[{"label":"LN","value":24.0,"valor":1586.57},{"label":"RN","value":11.0,"valor":733.9},{"label":"PN","value":4.0,"valor":379.6},{"label":"TT","value":3.0,"valor":209.70000000000002}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":20.0,"valor":1708.0,"pct":16.666666666666664,"pctLinhas":16.666666666666664,"ticket":85.4,"tipos":[{"label":"LN","value":8.0,"valor":659.2},{"label":"RN","value":8.0,"valor":859.2},{"label":"PN","value":4.0,"valor":189.6}],"tipo":[{"label":"LN","value":8.0,"valor":659.2},{"label":"RN","value":8.0,"valor":859.2},{"label":"PN","value":4.0,"valor":189.6}]}],"Mar":[{"consultor":"LUCAS DA FONCECA SILVA","linhas":107.0,"valor":5060.73,"pct":50.71090047393365,"pctLinhas":50.71090047393365,"ticket":47.29654205607476,"tipos":[{"label":"RN","value":65.0,"valor":3288.94},{"label":"PN","value":35.0,"valor":1396.5},{"label":"LN","value":5.0,"valor":282.5},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}],"tipo":[{"label":"RN","value":65.0,"valor":3288.94},{"label":"PN","value":35.0,"valor":1396.5},{"label":"LN","value":5.0,"valor":282.5},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":104.0,"valor":7292.780000000001,"pct":49.28909952606635,"pctLinhas":49.28909952606635,"ticket":70.12288461538462,"tipos":[{"label":"LN","value":58.0,"valor":4059.38},{"label":"RN","value":29.0,"valor":2035.1000000000001},{"label":"PN","value":9.0,"valor":669.1},{"label":"TT","value":7.0,"valor":489.3},{"label":"TT INTERNA","value":1.0,"valor":39.9}],"tipo":[{"label":"LN","value":58.0,"valor":4059.38},{"label":"RN","value":29.0,"valor":2035.1000000000001},{"label":"PN","value":9.0,"valor":669.1},{"label":"TT","value":7.0,"valor":489.3},{"label":"TT INTERNA","value":1.0,"valor":39.9}]}],"Abr":[{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":53.0,"valor":3508.9700000000003,"pct":52.475247524752476,"pctLinhas":52.475247524752476,"ticket":66.20698113207547,"tipos":[{"label":"LN","value":29.0,"valor":1670.69},{"label":"RN","value":19.0,"valor":1538.1000000000001},{"label":"PN","value":4.0,"valor":239.6},{"label":"TT INTERNA","value":1.0,"valor":60.58}],"tipo":[{"label":"LN","value":29.0,"valor":1670.69},{"label":"RN","value":19.0,"valor":1538.1000000000001},{"label":"PN","value":4.0,"valor":239.6},{"label":"TT INTERNA","value":1.0,"valor":60.58}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":39.0,"valor":2925.29,"pct":38.613861386138616,"pctLinhas":38.613861386138616,"ticket":75.0074358974359,"tipos":[{"label":"LN","value":18.0,"valor":1206.32},{"label":"TT INTERNA","value":13.0,"valor":939.77},{"label":"RN","value":8.0,"valor":779.2}],"tipo":[{"label":"LN","value":18.0,"valor":1206.32},{"label":"TT INTERNA","value":13.0,"valor":939.77},{"label":"RN","value":8.0,"valor":779.2}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":9.0,"valor":629.1,"pct":8.91089108910891,"pctLinhas":8.91089108910891,"ticket":69.9,"tipos":[{"label":"RN","value":8.0,"valor":559.2},{"label":"LN","value":1.0,"valor":69.9}],"tipo":[{"label":"RN","value":8.0,"valor":559.2},{"label":"LN","value":1.0,"valor":69.9}]}],"Mai":[{"consultor":"LUCAS DA FONCECA SILVA","linhas":91.0,"valor":4235.900000000001,"pct":47.89473684210526,"pctLinhas":47.89473684210526,"ticket":46.548351648351655,"tipos":[{"label":"RN","value":75.0,"valor":2317.5},{"label":"LN","value":16.0,"valor":1918.4}],"tipo":[{"label":"RN","value":75.0,"valor":2317.5},{"label":"LN","value":16.0,"valor":1918.4}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":65.0,"valor":4357.860000000001,"pct":34.21052631578947,"pctLinhas":34.21052631578947,"ticket":67.04400000000001,"tipos":[{"label":"LN","value":49.0,"valor":3119.46},{"label":"RN","value":8.0,"valor":509.2},{"label":"TT INTERNA","value":5.0,"valor":529.5},{"label":"PN","value":3.0,"valor":199.7}],"tipo":[{"label":"LN","value":49.0,"valor":3119.46},{"label":"RN","value":8.0,"valor":509.2},{"label":"TT INTERNA","value":5.0,"valor":529.5},{"label":"PN","value":3.0,"valor":199.7}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":34.0,"valor":2082.75,"pct":17.894736842105264,"pctLinhas":17.894736842105264,"ticket":61.25735294117647,"tipos":[{"label":"LN","value":19.0,"valor":1014.46},{"label":"TT INTERNA","value":8.0,"valor":458.99},{"label":"RN","value":5.0,"valor":469.5},{"label":"PN","value":2.0,"valor":139.8}],"tipo":[{"label":"LN","value":19.0,"valor":1014.46},{"label":"TT INTERNA","value":8.0,"valor":458.99},{"label":"RN","value":5.0,"valor":469.5},{"label":"PN","value":2.0,"valor":139.8}]}],"Jun":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":30.0,"valor":2342.0,"pct":83.33333333333334,"pctLinhas":83.33333333333334,"ticket":78.06666666666666,"tipos":[{"label":"LN","value":16.0,"valor":953.4},{"label":"RN","value":9.0,"valor":1049.1000000000001},{"label":"TT INTERNA","value":3.0,"valor":199.7},{"label":"PN","value":2.0,"valor":139.8}],"tipo":[{"label":"LN","value":16.0,"valor":953.4},{"label":"RN","value":9.0,"valor":1049.1000000000001},{"label":"TT INTERNA","value":3.0,"valor":199.7},{"label":"PN","value":2.0,"valor":139.8}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":6.0,"valor":524.4,"pct":16.666666666666664,"pctLinhas":16.666666666666664,"ticket":87.39999999999999,"tipos":[{"label":"LN","value":3.0,"valor":219.70000000000002},{"label":"RN","value":3.0,"valor":304.70000000000005}],"tipo":[{"label":"LN","value":3.0,"valor":219.70000000000002},{"label":"RN","value":3.0,"valor":304.70000000000005}]}],"Jul":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":6.0,"valor":421.40000000000003,"pct":66.66666666666666,"pctLinhas":66.66666666666666,"ticket":70.23333333333333,"tipos":[{"label":"RN","value":3.0,"valor":239.70000000000002},{"label":"LN","value":2.0,"valor":109.8},{"label":"PN","value":1.0,"valor":71.9}],"tipo":[{"label":"RN","value":3.0,"valor":239.70000000000002},{"label":"LN","value":2.0,"valor":109.8},{"label":"PN","value":1.0,"valor":71.9}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":2.0,"valor":0.02,"pct":22.22222222222222,"pctLinhas":22.22222222222222,"ticket":0.01,"tipos":[{"label":"LN","value":2.0,"valor":0.02}],"tipo":[{"label":"LN","value":2.0,"valor":0.02}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":1.0,"valor":79.9,"pct":11.11111111111111,"pctLinhas":11.11111111111111,"ticket":79.9,"tipos":[{"label":"LN","value":1.0,"valor":79.9}],"tipo":[{"label":"LN","value":1.0,"valor":79.9}]}]},"tipoDetalhe":[{"label":"LN","value":338.0,"valor":22223.08},{"label":"RN","value":298.0,"valor":17357.72},{"label":"PN","value":86.0,"valor":4398.7},{"label":"TT INTERNA","value":35.0,"valor":2616.12},{"label":"TT","value":13.0,"valor":828.7}],"tipoByMes":{"Jan":[{"label":"LN","value":57.0,"valor":3288.28},{"label":"RN","value":41.0,"valor":2374.89},{"label":"PN","value":3.0,"valor":164.7},{"label":"TT INTERNA","value":1.0,"valor":134.9},{"label":"TT","value":1.0,"valor":29.9}],"Fev":[{"label":"LN","value":62.0,"valor":4230.87},{"label":"PN","value":27.0,"valor":1377.6},{"label":"RN","value":25.0,"valor":1892.5900000000001},{"label":"TT","value":4.0,"valor":279.6},{"label":"TT INTERNA","value":2.0,"valor":189.89}],"Mar":[{"label":"RN","value":94.0,"valor":5324.04},{"label":"LN","value":63.0,"valor":4341.88},{"label":"PN","value":44.0,"valor":2065.6},{"label":"TT","value":8.0,"valor":519.2},{"label":"TT INTERNA","value":2.0,"valor":102.78999999999999}],"Abr":[{"label":"LN","value":48.0,"valor":2946.9100000000003},{"label":"RN","value":35.0,"valor":2876.5},{"label":"TT INTERNA","value":14.0,"valor":1000.35},{"label":"PN","value":4.0,"valor":239.6}],"Mai":[{"label":"RN","value":88.0,"valor":3296.2},{"label":"LN","value":84.0,"valor":6052.320000000001},{"label":"TT INTERNA","value":13.0,"valor":988.49},{"label":"PN","value":5.0,"valor":339.5}],"Jun":[{"label":"LN","value":19.0,"valor":1173.1},{"label":"RN","value":12.0,"valor":1353.8},{"label":"TT INTERNA","value":3.0,"valor":199.7},{"label":"PN","value":2.0,"valor":139.8}],"Jul":[{"label":"LN","value":5.0,"valor":189.72},{"label":"RN","value":3.0,"valor":239.70000000000002},{"label":"PN","value":1.0,"valor":71.9}]}},"faturamento":{"kpis":{"mesAtual":284233.32,"mesAnterior":281116.43,"varMensal":1.1087541201344986,"anoAtual":1738341.58,"anoAnterior":3567136.81,"anoAnteriorComparavel":1777457.1,"varAnualComparavel":-2.2006449550878058,"metaMensal":350000,"alcancadoMensal":81.20952,"metaAnual":4200000,"alcancadoAnual":41.38908523809524,"mesAtualLabel":"Junho","mesAnteriorLabel":"Maio","refMonth":6,"anoAtualRef":2026,"anoAnteriorRef":2025,"ytdLabel":"Jan–Jun/2026"},"mensal":[{"mes":"Jan","2025":285068.26,"2026":300481.43},{"mes":"Fev","2025":290122.67,"2026":296775.48},{"mes":"Mar","2025":295603.36,"2026":284840.28},{"mes":"Abr","2025":295704.02,"2026":290894.64},{"mes":"Mai","2025":303486.02,"2026":281116.43},{"mes":"Jun","2025":307472.77,"2026":284233.32},{"mes":"Jul","2025":302378.3,"2026":0},{"mes":"Ago","2025":293307.52,"2026":0},{"mes":"Set","2025":295579.96,"2026":0},{"mes":"Out","2025":301100.74,"2026":0},{"mes":"Nov","2025":293138.51,"2026":0},{"mes":"Dez","2025":304174.68,"2026":0}],"tipo":[{"label":"PJ","value":1304898.4299998549,"clientes":237},{"label":"PF","value":433443.1500000295,"clientes":754}],"clientes":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","atual":20922.820000000014,"anterior":21993.530000000108,"variacao":-4.868295357771529},{"cliente":"LONA CONSTRUTORA LTDA","atual":8529.929999999993,"anterior":8452.049999999994,"variacao":0.9214332617530571},{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","atual":7906.49999999997,"anterior":7906.499999999969,"variacao":1.150312656387696e-14},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","atual":7181.450000000016,"anterior":7124.730000000011,"variacao":0.7961003434516776},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","atual":6640.499999999983,"anterior":6525.499999999982,"variacao":1.7623170638265455},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","atual":6033.039999999987,"anterior":5686.629999999991,"variacao":6.091657097437266},{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","atual":5625.989999999998,"anterior":5625.989999999995,"variacao":4.8497848473224926e-14},{"cliente":"LEGACY IOT LTDA","atual":5501.859999999994,"anterior":4946.2999999999965,"variacao":11.231829852617068},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","atual":5495.499999999994,"anterior":5495.499999999994,"variacao":0.0},{"cliente":"STA MAQUINAS LTDA","atual":5364.019999999987,"anterior":5408.91999999999,"variacao":-0.8301102623075098},{"cliente":"ASSOCIACAO MULTIPLA DE PROTECAO E ASSISTENCIA AUT","atual":4478.749999999987,"anterior":4493.749999999987,"variacao":-0.33379694019471584},{"cliente":"IGREJA EVANGELICA ASSEMBLEIA DE DEUS - MINISTERIO VILA NOVA","atual":4258.400000000001,"anterior":4258.4000000000015,"variacao":-2.1357662543981963e-14},{"cliente":"LC ENCOMENDAS E CARGAS LTDA","atual":3797.720000000004,"anterior":3607.900000000004,"variacao":5.261232295795324},{"cliente":"ARMAZEM DA DECORACAO LTDA","atual":3670.040000000005,"anterior":3670.040000000005,"variacao":0.0},{"cliente":"BEAUVALLET GOIAS ALIMENTOS LTDA","atual":3592.009999999999,"anterior":3597.0299999999984,"variacao":-0.1395595810988379}],"topAno":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","valor":123062.05999999827},{"cliente":"LONA CONSTRUTORA LTDA","valor":49543.740000000376},{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","valor":47468.99999999993},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","valor":42722.48999999972},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","valor":39268.00000000075},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","valor":34716.220000000496},{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","valor":33842.16000000036},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","valor":33008.250000000524},{"cliente":"STA MAQUINAS LTDA","valor":32967.26000000046},{"cliente":"LEGACY IOT LTDA","valor":29407.040000000223}]},"inad":{"kpis":{"total":217804.27,"mes":1209.99,"mesAnterior":21793.47,"varMes":-94.44792408001112,"pctMes":0.4257030808351392,"pctTotal":12.529428767388742,"clientes":556,"registros":1165,"refMonth":7,"refYear":2026},"mensal":[{"mes":"Fev","valor":17940.9},{"mes":"Mar","valor":6666.69},{"mes":"Abr","valor":5894.44},{"mes":"Mai","valor":14725.310000000001},{"mes":"Jun","valor":21793.47},{"mes":"Jul","valor":1209.99}],"empresa":[{"label":"GRITE ALTO","value":101563.38999999952,"count":502,"key":"GRITE ALTO"},{"label":"WICK GESTÃO","value":76422.08000000007,"count":384,"key":"WICK GESTÃO"},{"label":"MOVE","value":39818.80000000018,"count":279,"key":"MOVE"}],"tipo":[{"label":"PF","value":117696.94999999863,"count":1010,"key":"PF"},{"label":"PJ","value":100107.31999999993,"count":155,"key":"PJ"}],"aging":[{"label":"+90 dias","value":174181.05999999895},{"label":"1-30 dias","value":23003.460000000006},{"label":"31-60 dias","value":14725.31},{"label":"61-90 dias","value":5894.44}],"clientes":[{"cliente":"DOLP ENGENHARIA LTDA (MT)","valor":11065.6,"pct":5.080524821666719},{"cliente":"DOLP ENGENHARIA LTDA (GO)","valor":10778.57,"pct":4.948741363059595},{"cliente":"H HOUSE SERVICE LTDA","valor":7978.8,"pct":3.66328906223923},{"cliente":"QUEIROZ STORE LTDA","valor":7402.28,"pct":3.3985926905840733},{"cliente":"60.147.068 PEDRO HENRIQUE RIBEIRO DE QUELUZ","valor":5650.099999999999,"pct":2.5941181042961188},{"cliente":"GOLD MONTAGEM, INSTALACAO E LOCACAO LTDA","valor":5554.129999999999,"pct":2.550055607266102},{"cliente":"LEGACY IOT LTDA","valor":5501.86,"pct":2.526056996035936},{"cliente":"ANDERSON DE MAGALHAES PEREIRA DA SILVA","valor":5117.880000000001,"pct":2.3497610951337187},{"cliente":"XPM TRANSPORTE E SERVICOS LTDA","valor":4511.159999999999,"pct":2.071199063269053},{"cliente":"DINAMICA GOIAS ATACADO DISTRIBUIDORA LTDA","valor":3218.55,"pct":1.4777258499110235},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","valor":2653.0,"pct":1.2180661104577977},{"cliente":"DAIANE MORAIS DE SOUZA","valor":2249.5,"pct":1.0328080344797648}]},"cancelados":{"kpis":{"total":1283,"valor":76400.57,"aPedido":805,"inad":478,"ticket":59.54837879968824,"qtdMes":13,"qtdMesAnterior":110,"varMes":-88.18181818181819,"refMonth":7,"refYear":2026,"custoTotal":25378.152,"custoIdentificados":775,"custoNaoIdentificados":508,"margemPerdida":51022.418000000005,"coberturaCustoPct":60.40530007794233,"operadoraNaoIdentificada":8,"valorOperadoraNaoIdentificada":433.62,"custoOperadoraNaoIdentificada":0.0},"mensal":[{"mes":"Fev","qtd":99,"valor":5468.12,"custo":2100.828,"aPedido":25,"inad":74},{"mes":"Mar","qtd":161,"valor":7847.37,"custo":934.068,"aPedido":22,"inad":139},{"mes":"Abr","qtd":21,"valor":1394.64,"custo":441.58799999999997,"aPedido":13,"inad":8},{"mes":"Mai","qtd":28,"valor":2400.09,"custo":1265.52,"aPedido":13,"inad":15},{"mes":"Jun","qtd":110,"valor":7841.16,"custo":2220.648,"aPedido":63,"inad":47},{"mes":"Jul","qtd":13,"valor":1237.79,"custo":440.88,"aPedido":2,"inad":11}],"motivos":[{"label":"A pedido","value":805,"valor":44220.720000000474,"custo":14806.835999999908},{"label":"Inadimplência","value":478,"valor":32179.850000000344,"custo":10571.315999999952}],"empresa":[{"label":"WICK GESTÃO","value":810,"valor":42250.460000000625,"custo":13041.407999999916},{"label":"GRITE ALTO","value":276,"valor":21894.980000000065,"custo":8682.035999999993},{"label":"MOVE","value":197,"valor":12255.129999999966,"custo":3654.708000000005}],"operadora":[{"label":"TIM","value":671,"valor":45317.97000000052,"custo":15991.307999999939},{"label":"VIVO","value":559,"valor":28176.800000000276,"custo":9136.187999999984},{"label":"CLARO","value":45,"valor":2472.1800000000003,"custo":250.65599999999998}],"planos":[{"label":"62981599000 VIVO 50GB CANCELADO","value":2,"valor":139.8,"custo":47.76},{"label":"62982630851 ROTEADOR 5G INTELBRAS ENGL","value":2,"valor":389.8,"custo":0.0},{"label":"62981851399 ROTEADOR 5G INTELBRAS ENGL","value":2,"valor":319.8,"custo":131.76},{"label":"98985261547 TIM ILIMITADO CANCELADO","value":1,"valor":189.9,"custo":44.28},{"label":"93981302068 TIM 10GB CANCELADO","value":1,"valor":49.9,"custo":0.0},{"label":"69981530047 TIM VOZ cancelado","value":1,"valor":29.9,"custo":27.48},{"label":"69981530001 TIM 1GB-cancelada 10-09-20","value":1,"valor":34.9,"custo":27.48},{"label":"67999646521 VIVO 10GB-cancelada 28/05/","value":1,"valor":69.9,"custo":31.08},{"label":"67992318839 TIM 50GB-CANCELADA 30-03-2","value":1,"valor":79.9,"custo":44.28},{"label":"67992279645 CLARO 80GB CANCELADO","value":1,"valor":186.9,"custo":0.0}],"recentes":[{"desc":"62982630851 ROTEADOR 5G INTELBRAS ENGL0702523LZ-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":199.9,"custo":0.0,"operadora":"TIM","empresa":"WICK GESTÃO"},{"desc":"62994102779 VIVO 30GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":103.9,"custo":23.88,"operadora":"VIVO","empresa":"WICK GESTÃO"},{"desc":"62994760797 TIM 50GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":69.9,"custo":44.28,"operadora":"TIM","empresa":"WICK GESTÃO"},{"desc":"62993216169 TIM 20GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":59.9,"custo":16.08,"operadora":"TIM","empresa":"WICK GESTÃO"},{"desc":"61984000041 TIM 50GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":79.9,"custo":0.0,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"66999533392 VIVO 1GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":29.9,"custo":23.88,"operadora":"VIVO","empresa":"GRITE ALTO"},{"desc":"66992410912 VIVO 1GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":39.9,"custo":23.88,"operadora":"VIVO","empresa":"GRITE ALTO"},{"desc":"62984340100 500GB-cancelada 07-07-2026","motivo":"Inadimplência","data":"2026-07-07","valor":99.99,"custo":65.88,"operadora":"TIM","empresa":"MOVE"},{"desc":"62993073217 TIM 20GB-cancelada 01-07-2026","motivo":"A pedido","data":"2026-07-06","valor":59.9,"custo":33.48,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"67982150243 TIM ILIMITADO ROTEADOR 5G O9LM1200901YV-cancelada","motivo":"A pedido","data":"2026-07-02","valor":169.9,"custo":65.88,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"62982140299 ROTEADOR 5G INTELBRAS O9LM12008371B-CANCELADA 02-07-2026","motivo":"Inadimplência","data":"2026-07-02","valor":179.9,"custo":65.88,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"21983970664 TIM 50GB-CANCELADA 02-07-2026","motivo":"Inadimplência","data":"2026-07-02","valor":79.9,"custo":44.28,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"62999131135 TIM 20GB-cancelada 01/07/2026","motivo":"Inadimplência","data":"2026-07-01","valor":64.9,"custo":33.48,"operadora":"TIM","empresa":"MOVE"},{"desc":"62983000400 TIM 50GB-cancelado 30/06/2026","motivo":"Inadimplência","data":"2026-06-30","valor":79.9,"custo":44.28,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"62991371020 TIM 50GB-cancelado 30/06/2026","motivo":"Inadimplência","data":"2026-06-30","valor":99.9,"custo":44.28,"operadora":"TIM","empresa":"WICK GESTÃO"}],"operadoraOutros":{"label":"Sem operadora identificada","value":8,"valor":433.62,"custo":0.0}}};
+const DATA={"meta":{"updated":"08/07/2026","generated":"08/07/2026","source":"ETL Diário HTML · OMIE + BAZONA + Relatório de Vendas","etlVersion":"GERENCIAL_ETL_SIMULADO_PY_v2","periodos":{"parque":"Julho/2026","faturamento":"Junho/2026","vendas":"Julho/2026","inad":"Julho/2026","cancel":"Julho/2026"}},"parque":{"kpis":{"total":7578,"comCliente":4998,"comClientePct":65.95407759303247,"estoque":2580,"estoquePct":34.04592240696754,"estoqueBloqueado":67,"estoqueAtivoBloqueavel":849,"estoqueNaoBloqueavel":1731,"custoEstoque":80175.156,"custoTotal":225057.864,"valorFaturado":288371.005,"lucro":143488.297,"margem":49.75822621279139},"status":[{"label":"Ativo","value":7300.0,"count":7300,"key":"Ativo"},{"label":"Cancelado","value":160.0,"count":160,"key":"Cancelado"},{"label":"Bloqueio parcial","value":67.0,"count":67,"key":"Bloqueio parcial"},{"label":"Suspenso","value":48.0,"count":48,"key":"Suspenso"},{"label":"Suspensa Voluntário Gratuita","value":3.0,"count":3,"key":"Suspensa Voluntário Gratuita"}],"operadora":[{"label":"TIM","value":3134.0,"count":3134,"key":"TIM"},{"label":"VIVO","value":1465.0,"count":1465,"key":"VIVO"},{"label":"CLARO","value":399.0,"count":399,"key":"CLARO"}],"empresa":[{"label":"WICK GESTÃO","value":2191,"valor":132196.9509999982},{"label":"MOVE","value":2009,"valor":105003.88999999843},{"label":"GRITE ALTO","value":798,"valor":51170.16400000052}],"empresaOmie":[{"value":2191,"valor":132196.9509999982,"key":"WICK","label":"WICK GESTÃO"},{"value":2009,"valor":105003.88999999843,"key":"MOVE","label":"MOVE"},{"value":798,"valor":51170.16400000052,"key":"GRITE","label":"GRITE ALTO"}],"clientes":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","linhas":269,"faturamento":23049.69000000005,"ticket":85.68657992565075},{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","linhas":214,"faturamento":8585.069999999965,"ticket":40.117149532710116},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","linhas":171,"faturamento":6525.499999999982,"ticket":38.16081871345018},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","linhas":145,"faturamento":5495.499999999994,"ticket":37.899999999999956},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","linhas":143,"faturamento":5786.42999999999,"ticket":40.46454545454539},{"cliente":"STA MAQUINAS LTDA","linhas":126,"faturamento":5428.009999999994,"ticket":43.0794444444444},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","linhas":111,"faturamento":7181.4500000000135,"ticket":64.69774774774787},{"cliente":"ASSOCIACAO MULTIPLA DE PROTECAO E ASSISTENCIA AUT","linhas":107,"faturamento":4478.749999999988,"ticket":41.857476635513905},{"cliente":"BELMA INDUSTRIAL DE GENEROS ALIMENTICIOS LTDA","linhas":104,"faturamento":3194.220000000006,"ticket":30.713653846153907},{"cliente":"LONA CONSTRUTORA LTDA","linhas":93,"faturamento":6925.380000000001,"ticket":74.46645161290324},{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","linhas":92,"faturamento":5680.889999999994,"ticket":61.748804347826024},{"cliente":"LEGACY IOT LTDA","linhas":86,"faturamento":5629.399999999995,"ticket":65.45813953488367},{"cliente":"DISTRIBUIDORA CENTRAL PRODUTOS ALIMENTICIOS LTDA","linhas":82,"faturamento":3067.4799999999973,"ticket":37.4082926829268},{"cliente":"ASSOCIACAO DE COMBATE AO CANCER EM GOIAS","linhas":80,"faturamento":3192.0000000000045,"ticket":39.900000000000055},{"cliente":"ASSOCIACAO COMERCIAL E INDUSTRIAL DE ANAPOLIS","linhas":74,"faturamento":3231.7700000000036,"ticket":43.67256756756762}],"ufs":[{"label":"GO","value":4364.0,"count":4364,"key":"GO"},{"label":"SP","value":165.0,"count":165,"key":"SP"},{"label":"DF","value":95.0,"count":95,"key":"DF"},{"label":"TO","value":74.0,"count":74,"key":"TO"},{"label":"RO","value":71.0,"count":71,"key":"RO"},{"label":"CE","value":60.0,"count":60,"key":"CE"},{"label":"MS","value":38.0,"count":38,"key":"MS"},{"label":"MG","value":35.0,"count":35,"key":"MG"},{"label":"MT","value":28.0,"count":28,"key":"MT"},{"label":"MA","value":16.0,"count":16,"key":"MA"},{"label":"AC","value":12.0,"count":12,"key":"AC"},{"label":"PA","value":10.0,"count":10,"key":"PA"},{"label":"RJ","value":6.0,"count":6,"key":"RJ"},{"label":"PR","value":5.0,"count":5,"key":"PR"},{"label":"PI","value":5.0,"count":5,"key":"PI"},{"label":"RS","value":4.0,"count":4,"key":"RS"},{"label":"SC","value":3.0,"count":3,"key":"SC"},{"label":"RR","value":2.0,"count":2,"key":"RR"},{"label":"BA","value":2.0,"count":2,"key":"BA"},{"label":"PE","value":1.0,"count":1,"key":"PE"},{"label":"ES","value":1.0,"count":1,"key":"ES"},{"label":"PB","value":1.0,"count":1,"key":"PB"}],"anterior":{"periodo":"07/07/2026","comCliente":5001,"estoque":2853,"custoTotal":230334.72,"valorFaturado":288672.705,"estoqueAtivoBloqueavel":895},"kpisByEmpresa":{"WICK":{"comCliente":2191,"valorFaturado":132196.951,"pctBase":43.8375350140056,"semUf":0},"MOVE":{"comCliente":2009,"valorFaturado":105003.89,"pctBase":40.19607843137255,"semUf":0},"GRITE":{"comCliente":798,"valorFaturado":51170.164,"pctBase":15.966386554621847,"semUf":0}},"clientesByEmpresa":{"WICK":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","linhas":269,"faturamento":23049.69000000005,"ticket":85.68657992565075},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","linhas":171,"faturamento":6525.499999999982,"ticket":38.16081871345018},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","linhas":111,"faturamento":7181.4500000000135,"ticket":64.69774774774787},{"cliente":"BELMA INDUSTRIAL DE GENEROS ALIMENTICIOS LTDA","linhas":104,"faturamento":3194.220000000006,"ticket":30.713653846153907},{"cliente":"ASSOCIACAO DE COMBATE AO CANCER EM GOIAS","linhas":80,"faturamento":3192.0000000000045,"ticket":39.900000000000055},{"cliente":"BATERIAS PERIM LTDA","linhas":72,"faturamento":3253.109999999998,"ticket":45.1820833333333},{"cliente":"BEAUVALLET GOIAS ALIMENTOS LTDA","linhas":64,"faturamento":3592.0600000000004,"ticket":56.125937500000006},{"cliente":"METALFORTE INDUSTRIA METALURGICA LTDA","linhas":53,"faturamento":2347.3799999999987,"ticket":44.29018867924526},{"cliente":"FRIOCENTER PESCADOS INDUSTRIA E  COMERCIO, IMPORTAÇÃO E EXPO","linhas":47,"faturamento":2151.860000000001,"ticket":45.78425531914896},{"cliente":"FLASH LOG COMERCIO E DISTRIBUICAO LTDA","linhas":45,"faturamento":2231.860000000001,"ticket":49.59688888888891},{"cliente":"CDA ALIMENTOS S.A. EM RECUPERACAO JUDICIAL","linhas":44,"faturamento":2104.690000000001,"ticket":47.83386363636366},{"cliente":"MINISTERIO FAMILY CHURCH","linhas":35,"faturamento":3115.5300000000016,"ticket":89.0151428571429},{"cliente":"PACHECO MATERIAIS PARA CONSTRUCAO LTDA","linhas":34,"faturamento":1813.550000000001,"ticket":53.33970588235297},{"cliente":"BRASIL COMPONENTES AUTOMOTIVOS LTDA","linhas":32,"faturamento":1800.3300000000002,"ticket":56.260312500000005},{"cliente":"NUTRIAL INSUMOS AGROPECUARIOS LTDA","linhas":29,"faturamento":1367.1000000000004,"ticket":47.14137931034484}],"MOVE":[{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","linhas":214,"faturamento":8585.069999999965,"ticket":40.117149532710116},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","linhas":145,"faturamento":5495.499999999994,"ticket":37.899999999999956},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","linhas":143,"faturamento":5786.42999999999,"ticket":40.46454545454539},{"cliente":"STA MAQUINAS LTDA","linhas":126,"faturamento":5428.009999999994,"ticket":43.0794444444444},{"cliente":"ASSOCIACAO MULTIPLA DE PROTECAO E ASSISTENCIA AUT","linhas":107,"faturamento":4478.749999999988,"ticket":41.857476635513905},{"cliente":"LONA CONSTRUTORA LTDA","linhas":93,"faturamento":6925.380000000001,"ticket":74.46645161290324},{"cliente":"DISTRIBUIDORA CENTRAL PRODUTOS ALIMENTICIOS LTDA","linhas":82,"faturamento":3067.4799999999973,"ticket":37.4082926829268},{"cliente":"ASSOCIACAO COMERCIAL E INDUSTRIAL DE ANAPOLIS","linhas":74,"faturamento":3231.7700000000036,"ticket":43.67256756756762},{"cliente":"LC ENCOMENDAS E CARGAS LTDA","linhas":72,"faturamento":3937.800000000004,"ticket":54.69166666666672},{"cliente":"AGORA MEDIO LTDA","linhas":66,"faturamento":2653.4000000000033,"ticket":40.20303030303035},{"cliente":"ARMAZEM DA DECORACAO LTDA","linhas":51,"faturamento":3670.040000000005,"ticket":71.96156862745107},{"cliente":"RECICLAR RECICLAGEM DE MATERIAIS LTDA","linhas":45,"faturamento":2303.500000000002,"ticket":51.18888888888893},{"cliente":"INSTITUTO DO CORACAO SAO LUCAS LTDA","linhas":45,"faturamento":3459.3000000000015,"ticket":76.87333333333336},{"cliente":"PAX CLINICA PSIQUIATRICA LTDA","linhas":44,"faturamento":2191.6000000000017,"ticket":49.80909090909095},{"cliente":"TRANSPORTADORA EXPRESSO GOIÁS LTDA","linhas":43,"faturamento":1590.7000000000007,"ticket":36.99302325581397}],"GRITE":[{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","linhas":92,"faturamento":5680.889999999994,"ticket":61.748804347826024},{"cliente":"LEGACY IOT LTDA","linhas":86,"faturamento":5629.399999999995,"ticket":65.45813953488367},{"cliente":"COALUMAQ COMERCIO DE COMPRESSORES LTDA","linhas":43,"faturamento":2748.05,"ticket":63.90813953488372},{"cliente":"IGREJA EVANGELICA ASSEMBLEIA DE DEUS - MINISTERIO VILA NOVA","linhas":43,"faturamento":4598.264000000001,"ticket":106.93637209302328},{"cliente":"GOVIDROS COMERCIAL GOIANIA DE VIDROS LTDA","linhas":34,"faturamento":2352.38,"ticket":69.18764705882353},{"cliente":"MARMORARTE -MARMORES E GRANITOS LTDA","linhas":22,"faturamento":1236.8,"ticket":56.21818181818182},{"cliente":"SAO MIGUEL INCORPORACOES E PARTICIPACOES SA","linhas":18,"faturamento":633.1999999999998,"ticket":35.17777777777777},{"cliente":"NASA VEICULOS LTDA","linhas":14,"faturamento":608.5999999999999,"ticket":43.47142857142857},{"cliente":"MVP ENTREGAS RAPIDAS LTDA","linhas":13,"faturamento":388.69999999999993,"ticket":29.899999999999995},{"cliente":"MMCS VENDAS LTDA","linhas":13,"faturamento":492.6999999999999,"ticket":37.89999999999999},{"cliente":"ELLUS CONSTRUTORA E INCORPORADORA LTDA","linhas":12,"faturamento":1208.8000000000002,"ticket":100.73333333333335},{"cliente":"JGS SOLUCOES E SERVICOS DE TECNOLOGIA LTDA","linhas":11,"faturamento":598.8999999999999,"ticket":54.44545454545453},{"cliente":"ALIA PROTECAO E BENEFICIOS","linhas":11,"faturamento":328.9,"ticket":29.9},{"cliente":"BASE VEICULOS LTDA","linhas":10,"faturamento":398.99999999999994,"ticket":39.89999999999999},{"cliente":"SPE EPOCA JD. AMERICA EMPREENDIMENTOS LTDA","linhas":10,"faturamento":398.99999999999994,"ticket":39.89999999999999}]},"ufsByEmpresa":{"WICK":[{"label":"GO","value":1957.0,"count":1957,"key":"GO"},{"label":"SP","value":77.0,"count":77,"key":"SP"},{"label":"TO","value":59.0,"count":59,"key":"TO"},{"label":"DF","value":45.0,"count":45,"key":"DF"},{"label":"MS","value":15.0,"count":15,"key":"MS"},{"label":"MG","value":8.0,"count":8,"key":"MG"},{"label":"PA","value":7.0,"count":7,"key":"PA"},{"label":"MA","value":5.0,"count":5,"key":"MA"},{"label":"RJ","value":4.0,"count":4,"key":"RJ"},{"label":"MT","value":3.0,"count":3,"key":"MT"},{"label":"SC","value":3.0,"count":3,"key":"SC"},{"label":"PR","value":3.0,"count":3,"key":"PR"},{"label":"RS","value":2.0,"count":2,"key":"RS"},{"label":"CE","value":1.0,"count":1,"key":"CE"},{"label":"PE","value":1.0,"count":1,"key":"PE"},{"label":"BA","value":1.0,"count":1,"key":"BA"}],"MOVE":[{"label":"GO","value":1711.0,"count":1711,"key":"GO"},{"label":"RO","value":71.0,"count":71,"key":"RO"},{"label":"CE","value":54.0,"count":54,"key":"CE"},{"label":"DF","value":41.0,"count":41,"key":"DF"},{"label":"SP","value":39.0,"count":39,"key":"SP"},{"label":"MG","value":27.0,"count":27,"key":"MG"},{"label":"MT","value":23.0,"count":23,"key":"MT"},{"label":"TO","value":12.0,"count":12,"key":"TO"},{"label":"AC","value":12.0,"count":12,"key":"AC"},{"label":"MS","value":11.0,"count":11,"key":"MS"},{"label":"MA","value":2.0,"count":2,"key":"MA"},{"label":"PA","value":2.0,"count":2,"key":"PA"},{"label":"RS","value":1.0,"count":1,"key":"RS"},{"label":"PR","value":1.0,"count":1,"key":"PR"},{"label":"PI","value":1.0,"count":1,"key":"PI"},{"label":"RJ","value":1.0,"count":1,"key":"RJ"}],"GRITE":[{"label":"GO","value":696.0,"count":696,"key":"GO"},{"label":"SP","value":49.0,"count":49,"key":"SP"},{"label":"MS","value":12.0,"count":12,"key":"MS"},{"label":"DF","value":9.0,"count":9,"key":"DF"},{"label":"MA","value":9.0,"count":9,"key":"MA"},{"label":"CE","value":5.0,"count":5,"key":"CE"},{"label":"PI","value":4.0,"count":4,"key":"PI"},{"label":"TO","value":3.0,"count":3,"key":"TO"},{"label":"MT","value":2.0,"count":2,"key":"MT"},{"label":"RR","value":2.0,"count":2,"key":"RR"},{"label":"PR","value":1.0,"count":1,"key":"PR"},{"label":"PA","value":1.0,"count":1,"key":"PA"},{"label":"RS","value":1.0,"count":1,"key":"RS"},{"label":"RJ","value":1.0,"count":1,"key":"RJ"},{"label":"ES","value":1.0,"count":1,"key":"ES"},{"label":"PB","value":1.0,"count":1,"key":"PB"},{"label":"BA","value":1.0,"count":1,"key":"BA"}]},"operadoraByEmpresa":{"WICK":[{"label":"TIM","value":1234.0,"count":1234,"key":"TIM"},{"label":"VIVO","value":708.0,"count":708,"key":"VIVO"},{"label":"CLARO","value":249.0,"count":249,"key":"CLARO"}],"MOVE":[{"label":"TIM","value":1305.0,"count":1305,"key":"TIM"},{"label":"VIVO","value":597.0,"count":597,"key":"VIVO"},{"label":"CLARO","value":107.0,"count":107,"key":"CLARO"}],"GRITE":[{"label":"TIM","value":595.0,"count":595,"key":"TIM"},{"label":"VIVO","value":160.0,"count":160,"key":"VIVO"},{"label":"CLARO","value":43.0,"count":43,"key":"CLARO"}]},"statusContratoByEmpresa":{"WICK":[{"label":"Ativo","value":1995.0,"count":1995,"key":"Ativo"},{"label":"Suspenso","value":196.0,"count":196,"key":"Suspenso"}],"MOVE":[{"label":"Ativo","value":1800.0,"count":1800,"key":"Ativo"},{"label":"Suspenso","value":209.0,"count":209,"key":"Suspenso"}],"GRITE":[{"label":"Ativo","value":787.0,"count":787,"key":"Ativo"},{"label":"Suspenso","value":11.0,"count":11,"key":"Suspenso"}]},"clientesResumo":{"geral":{"total":826,"pf":623,"pj":203},"empresa":{"WICK":{"total":378,"pf":286,"pj":92},"MOVE":{"total":240,"pf":183,"pj":57},"GRITE ALTO":{"total":210,"pf":155,"pj":55}},"operadora":{"TIM":{"total":619,"pf":450,"pj":169},"VIVO":{"total":227,"pf":152,"pj":75},"CLARO":{"total":112,"pf":75,"pj":37}},"empresaOperadora":{"WICK":{"TIM":{"total":236,"pf":160,"pj":76},"VIVO":{"total":139,"pf":101,"pj":38},"CLARO":{"total":83,"pf":63,"pj":20}},"MOVE":{"TIM":{"total":199,"pf":153,"pj":46},"VIVO":{"total":59,"pf":36,"pj":23},"CLARO":{"total":15,"pf":5,"pj":10}},"GRITE ALTO":{"TIM":{"total":185,"pf":138,"pj":47},"VIVO":{"total":30,"pf":15,"pj":15},"CLARO":{"total":14,"pf":7,"pj":7}}}}},"vendas":{"kpis":{"ano":2026,"mesReferencia":"Jul","qtdYtd":770.0,"valorYtd":47424.32,"contratosYtd":340,"ticket":61.59002597402598,"qtdMes":9.0,"valorMes":501.32000000000005,"qtdMesAnterior":36.0,"varMes":-75.0,"refMonth":7},"mensal":[{"mes":"Jan","qtd":103.0,"valor":5992.67,"contratos":50},{"mes":"Fev","qtd":120.0,"valor":7970.55,"contratos":66},{"mes":"Mar","qtd":211.0,"valor":12353.51,"contratos":80},{"mes":"Abr","qtd":101.0,"valor":7063.360000000001,"contratos":53},{"mes":"Mai","qtd":190.0,"valor":10676.51,"contratos":53},{"mes":"Jun","qtd":36.0,"valor":2866.4,"contratos":31},{"mes":"Jul","qtd":9.0,"valor":501.32000000000005,"contratos":7}],"consultores":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":255.0,"valor":17973.99,"pct":33.116883116883116,"pctLinhas":33.116883116883116,"ticket":70.48623529411765,"tipos":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}],"tipo":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":232.0,"valor":11798.45,"pct":30.129870129870127,"pctLinhas":30.129870129870127,"ticket":50.855387931034485,"tipos":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}],"tipo":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":125.0,"valor":8471.130000000001,"pct":16.233766233766232,"pctLinhas":16.233766233766232,"ticket":67.76904,"tipos":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}],"tipo":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}]},{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":94.0,"valor":5538.16,"pct":12.207792207792208,"pctLinhas":12.207792207792208,"ticket":58.91659574468085,"tipos":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}],"tipo":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}]},{"consultor":"EMILLY DE OLIVEIRA MARÇAL","linhas":64.0,"valor":3642.59,"pct":8.311688311688311,"pctLinhas":8.311688311688311,"ticket":56.91546875,"tipos":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}],"tipo":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}]}],"tipo":[{"label":"LN","value":338.0,"valor":22223.08},{"label":"RN","value":298.0,"valor":17357.72},{"label":"PN","value":86.0,"valor":4398.7},{"label":"TT INTERNA","value":35.0,"valor":2616.12},{"label":"TT","value":13.0,"valor":828.7}],"operadora":[{"label":"TIM","value":519.0,"count":316,"key":"TIM"},{"label":"VIVO","value":186.0,"count":53,"key":"VIVO"},{"label":"CLARO","value":65.0,"count":25,"key":"CLARO"}],"consultoresDetalhe":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":255.0,"valor":17973.99,"pct":33.116883116883116,"pctLinhas":33.116883116883116,"ticket":70.48623529411765,"tipos":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}],"tipo":[{"label":"LN","value":137.0,"valor":8929.93},{"label":"RN","value":65.0,"valor":5306.5},{"label":"TT INTERNA","value":25.0,"valor":1638.3600000000001},{"label":"PN","value":18.0,"valor":1400.2},{"label":"TT","value":10.0,"valor":699.0}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":232.0,"valor":11798.45,"pct":30.129870129870127,"pctLinhas":30.129870129870127,"ticket":50.855387931034485,"tipos":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}],"tipo":[{"label":"RN","value":156.0,"valor":7024.84},{"label":"PN","value":42.0,"valor":1750.8},{"label":"LN","value":32.0,"valor":2930.02},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":125.0,"valor":8471.130000000001,"pct":16.233766233766232,"pctLinhas":16.233766233766232,"ticket":67.76904,"tipos":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}],"tipo":[{"label":"LN","value":82.0,"valor":5089.75},{"label":"RN","value":30.0,"valor":2352.0},{"label":"PN","value":7.0,"valor":439.3},{"label":"TT INTERNA","value":6.0,"valor":590.08}]},{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":94.0,"valor":5538.16,"pct":12.207792207792208,"pctLinhas":12.207792207792208,"ticket":58.91659574468085,"tipos":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}],"tipo":[{"label":"LN","value":61.0,"valor":3750.98},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":10.0,"valor":689.09},{"label":"TT","value":2.0,"valor":99.80000000000001},{"label":"TT INTERNA","value":2.0,"valor":189.89}]},{"consultor":"EMILLY DE OLIVEIRA MARÇAL","linhas":64.0,"valor":3642.59,"pct":8.311688311688311,"pctLinhas":8.311688311688311,"ticket":56.91546875,"tipos":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}],"tipo":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}]}],"consultoresByMes":{"Jan":[{"consultor":"EMILLY DE OLIVEIRA MARÇAL","linhas":64.0,"valor":3642.59,"pct":62.13592233009708,"pctLinhas":62.13592233009708,"ticket":56.91546875,"tipos":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}],"tipo":[{"label":"RN","value":37.0,"valor":1985.29},{"label":"LN","value":26.0,"valor":1522.4},{"label":"TT INTERNA","value":1.0,"valor":134.9}]},{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":36.0,"valor":2185.38,"pct":34.95145631067961,"pctLinhas":34.95145631067961,"ticket":60.705000000000005,"tipos":[{"label":"LN","value":31.0,"valor":1765.88},{"label":"RN","value":4.0,"valor":389.6},{"label":"TT","value":1.0,"valor":29.9}],"tipo":[{"label":"LN","value":31.0,"valor":1765.88},{"label":"RN","value":4.0,"valor":389.6},{"label":"TT","value":1.0,"valor":29.9}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":3.0,"valor":164.7,"pct":2.912621359223301,"pctLinhas":2.912621359223301,"ticket":54.9,"tipos":[{"label":"PN","value":3.0,"valor":164.7}],"tipo":[{"label":"PN","value":3.0,"valor":164.7}]}],"Fev":[{"consultor":"JÚLIA FERREIRA ARCANJO","linhas":58.0,"valor":3352.78,"pct":48.333333333333336,"pctLinhas":48.333333333333336,"ticket":57.80655172413793,"tipos":[{"label":"LN","value":30.0,"valor":1985.1000000000001},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":6.0,"valor":299.49},{"label":"TT INTERNA","value":2.0,"valor":189.89},{"label":"TT","value":1.0,"valor":69.9}],"tipo":[{"label":"LN","value":30.0,"valor":1985.1000000000001},{"label":"PN","value":19.0,"valor":808.4},{"label":"RN","value":6.0,"valor":299.49},{"label":"TT INTERNA","value":2.0,"valor":189.89},{"label":"TT","value":1.0,"valor":69.9}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":42.0,"valor":2909.77,"pct":35.0,"pctLinhas":35.0,"ticket":69.28023809523809,"tipos":[{"label":"LN","value":24.0,"valor":1586.57},{"label":"RN","value":11.0,"valor":733.9},{"label":"PN","value":4.0,"valor":379.6},{"label":"TT","value":3.0,"valor":209.70000000000002}],"tipo":[{"label":"LN","value":24.0,"valor":1586.57},{"label":"RN","value":11.0,"valor":733.9},{"label":"PN","value":4.0,"valor":379.6},{"label":"TT","value":3.0,"valor":209.70000000000002}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":20.0,"valor":1708.0,"pct":16.666666666666664,"pctLinhas":16.666666666666664,"ticket":85.4,"tipos":[{"label":"LN","value":8.0,"valor":659.2},{"label":"RN","value":8.0,"valor":859.2},{"label":"PN","value":4.0,"valor":189.6}],"tipo":[{"label":"LN","value":8.0,"valor":659.2},{"label":"RN","value":8.0,"valor":859.2},{"label":"PN","value":4.0,"valor":189.6}]}],"Mar":[{"consultor":"LUCAS DA FONCECA SILVA","linhas":107.0,"valor":5060.73,"pct":50.71090047393365,"pctLinhas":50.71090047393365,"ticket":47.29654205607476,"tipos":[{"label":"RN","value":65.0,"valor":3288.94},{"label":"PN","value":35.0,"valor":1396.5},{"label":"LN","value":5.0,"valor":282.5},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}],"tipo":[{"label":"RN","value":65.0,"valor":3288.94},{"label":"PN","value":35.0,"valor":1396.5},{"label":"LN","value":5.0,"valor":282.5},{"label":"TT","value":1.0,"valor":29.9},{"label":"TT INTERNA","value":1.0,"valor":62.89}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":104.0,"valor":7292.780000000001,"pct":49.28909952606635,"pctLinhas":49.28909952606635,"ticket":70.12288461538462,"tipos":[{"label":"LN","value":58.0,"valor":4059.38},{"label":"RN","value":29.0,"valor":2035.1000000000001},{"label":"PN","value":9.0,"valor":669.1},{"label":"TT","value":7.0,"valor":489.3},{"label":"TT INTERNA","value":1.0,"valor":39.9}],"tipo":[{"label":"LN","value":58.0,"valor":4059.38},{"label":"RN","value":29.0,"valor":2035.1000000000001},{"label":"PN","value":9.0,"valor":669.1},{"label":"TT","value":7.0,"valor":489.3},{"label":"TT INTERNA","value":1.0,"valor":39.9}]}],"Abr":[{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":53.0,"valor":3508.9700000000003,"pct":52.475247524752476,"pctLinhas":52.475247524752476,"ticket":66.20698113207547,"tipos":[{"label":"LN","value":29.0,"valor":1670.69},{"label":"RN","value":19.0,"valor":1538.1000000000001},{"label":"PN","value":4.0,"valor":239.6},{"label":"TT INTERNA","value":1.0,"valor":60.58}],"tipo":[{"label":"LN","value":29.0,"valor":1670.69},{"label":"RN","value":19.0,"valor":1538.1000000000001},{"label":"PN","value":4.0,"valor":239.6},{"label":"TT INTERNA","value":1.0,"valor":60.58}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":39.0,"valor":2925.29,"pct":38.613861386138616,"pctLinhas":38.613861386138616,"ticket":75.0074358974359,"tipos":[{"label":"LN","value":18.0,"valor":1206.32},{"label":"TT INTERNA","value":13.0,"valor":939.77},{"label":"RN","value":8.0,"valor":779.2}],"tipo":[{"label":"LN","value":18.0,"valor":1206.32},{"label":"TT INTERNA","value":13.0,"valor":939.77},{"label":"RN","value":8.0,"valor":779.2}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":9.0,"valor":629.1,"pct":8.91089108910891,"pctLinhas":8.91089108910891,"ticket":69.9,"tipos":[{"label":"RN","value":8.0,"valor":559.2},{"label":"LN","value":1.0,"valor":69.9}],"tipo":[{"label":"RN","value":8.0,"valor":559.2},{"label":"LN","value":1.0,"valor":69.9}]}],"Mai":[{"consultor":"LUCAS DA FONCECA SILVA","linhas":91.0,"valor":4235.900000000001,"pct":47.89473684210526,"pctLinhas":47.89473684210526,"ticket":46.548351648351655,"tipos":[{"label":"RN","value":75.0,"valor":2317.5},{"label":"LN","value":16.0,"valor":1918.4}],"tipo":[{"label":"RN","value":75.0,"valor":2317.5},{"label":"LN","value":16.0,"valor":1918.4}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":65.0,"valor":4357.860000000001,"pct":34.21052631578947,"pctLinhas":34.21052631578947,"ticket":67.04400000000001,"tipos":[{"label":"LN","value":49.0,"valor":3119.46},{"label":"RN","value":8.0,"valor":509.2},{"label":"TT INTERNA","value":5.0,"valor":529.5},{"label":"PN","value":3.0,"valor":199.7}],"tipo":[{"label":"LN","value":49.0,"valor":3119.46},{"label":"RN","value":8.0,"valor":509.2},{"label":"TT INTERNA","value":5.0,"valor":529.5},{"label":"PN","value":3.0,"valor":199.7}]},{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":34.0,"valor":2082.75,"pct":17.894736842105264,"pctLinhas":17.894736842105264,"ticket":61.25735294117647,"tipos":[{"label":"LN","value":19.0,"valor":1014.46},{"label":"TT INTERNA","value":8.0,"valor":458.99},{"label":"RN","value":5.0,"valor":469.5},{"label":"PN","value":2.0,"valor":139.8}],"tipo":[{"label":"LN","value":19.0,"valor":1014.46},{"label":"TT INTERNA","value":8.0,"valor":458.99},{"label":"RN","value":5.0,"valor":469.5},{"label":"PN","value":2.0,"valor":139.8}]}],"Jun":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":30.0,"valor":2342.0,"pct":83.33333333333334,"pctLinhas":83.33333333333334,"ticket":78.06666666666666,"tipos":[{"label":"LN","value":16.0,"valor":953.4},{"label":"RN","value":9.0,"valor":1049.1000000000001},{"label":"TT INTERNA","value":3.0,"valor":199.7},{"label":"PN","value":2.0,"valor":139.8}],"tipo":[{"label":"LN","value":16.0,"valor":953.4},{"label":"RN","value":9.0,"valor":1049.1000000000001},{"label":"TT INTERNA","value":3.0,"valor":199.7},{"label":"PN","value":2.0,"valor":139.8}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":6.0,"valor":524.4,"pct":16.666666666666664,"pctLinhas":16.666666666666664,"ticket":87.39999999999999,"tipos":[{"label":"LN","value":3.0,"valor":219.70000000000002},{"label":"RN","value":3.0,"valor":304.70000000000005}],"tipo":[{"label":"LN","value":3.0,"valor":219.70000000000002},{"label":"RN","value":3.0,"valor":304.70000000000005}]}],"Jul":[{"consultor":"MARCOS PAULO BRITO CORRÊA","linhas":6.0,"valor":421.40000000000003,"pct":66.66666666666666,"pctLinhas":66.66666666666666,"ticket":70.23333333333333,"tipos":[{"label":"RN","value":3.0,"valor":239.70000000000002},{"label":"LN","value":2.0,"valor":109.8},{"label":"PN","value":1.0,"valor":71.9}],"tipo":[{"label":"RN","value":3.0,"valor":239.70000000000002},{"label":"LN","value":2.0,"valor":109.8},{"label":"PN","value":1.0,"valor":71.9}]},{"consultor":"LUCAS DA FONCECA SILVA","linhas":2.0,"valor":0.02,"pct":22.22222222222222,"pctLinhas":22.22222222222222,"ticket":0.01,"tipos":[{"label":"LN","value":2.0,"valor":0.02}],"tipo":[{"label":"LN","value":2.0,"valor":0.02}]},{"consultor":"GUILHERME DOS SANTOS SILVA","linhas":1.0,"valor":79.9,"pct":11.11111111111111,"pctLinhas":11.11111111111111,"ticket":79.9,"tipos":[{"label":"LN","value":1.0,"valor":79.9}],"tipo":[{"label":"LN","value":1.0,"valor":79.9}]}]},"tipoDetalhe":[{"label":"LN","value":338.0,"valor":22223.08},{"label":"RN","value":298.0,"valor":17357.72},{"label":"PN","value":86.0,"valor":4398.7},{"label":"TT INTERNA","value":35.0,"valor":2616.12},{"label":"TT","value":13.0,"valor":828.7}],"tipoByMes":{"Jan":[{"label":"LN","value":57.0,"valor":3288.28},{"label":"RN","value":41.0,"valor":2374.89},{"label":"PN","value":3.0,"valor":164.7},{"label":"TT INTERNA","value":1.0,"valor":134.9},{"label":"TT","value":1.0,"valor":29.9}],"Fev":[{"label":"LN","value":62.0,"valor":4230.87},{"label":"PN","value":27.0,"valor":1377.6},{"label":"RN","value":25.0,"valor":1892.5900000000001},{"label":"TT","value":4.0,"valor":279.6},{"label":"TT INTERNA","value":2.0,"valor":189.89}],"Mar":[{"label":"RN","value":94.0,"valor":5324.04},{"label":"LN","value":63.0,"valor":4341.88},{"label":"PN","value":44.0,"valor":2065.6},{"label":"TT","value":8.0,"valor":519.2},{"label":"TT INTERNA","value":2.0,"valor":102.78999999999999}],"Abr":[{"label":"LN","value":48.0,"valor":2946.9100000000003},{"label":"RN","value":35.0,"valor":2876.5},{"label":"TT INTERNA","value":14.0,"valor":1000.35},{"label":"PN","value":4.0,"valor":239.6}],"Mai":[{"label":"RN","value":88.0,"valor":3296.2},{"label":"LN","value":84.0,"valor":6052.320000000001},{"label":"TT INTERNA","value":13.0,"valor":988.49},{"label":"PN","value":5.0,"valor":339.5}],"Jun":[{"label":"LN","value":19.0,"valor":1173.1},{"label":"RN","value":12.0,"valor":1353.8},{"label":"TT INTERNA","value":3.0,"valor":199.7},{"label":"PN","value":2.0,"valor":139.8}],"Jul":[{"label":"LN","value":5.0,"valor":189.72},{"label":"RN","value":3.0,"valor":239.70000000000002},{"label":"PN","value":1.0,"valor":71.9}]}},"faturamento":{"kpis":{"mesAtual":284233.32,"mesAnterior":281116.43,"varMensal":1.1087541201344986,"anoAtual":1738341.58,"anoAnterior":3567136.81,"anoAnteriorComparavel":1777457.1,"varAnualComparavel":-2.2006449550878058,"metaMensal":300000.0,"alcancadoMensal":94.74444000000001,"metaAnual":3600000.0,"alcancadoAnual":48.287266111111116,"mesAtualLabel":"Junho","mesAnteriorLabel":"Maio","refMonth":6,"anoAtualRef":2026,"anoAnteriorRef":2025,"ytdLabel":"Jan–Jun/2026"},"mensal":[{"mes":"Jan","2025":285068.26,"2026":300481.43},{"mes":"Fev","2025":290122.67,"2026":296775.48},{"mes":"Mar","2025":295603.36,"2026":284840.28},{"mes":"Abr","2025":295704.02,"2026":290894.64},{"mes":"Mai","2025":303486.02,"2026":281116.43},{"mes":"Jun","2025":307472.77,"2026":284233.32},{"mes":"Jul","2025":302378.3,"2026":0},{"mes":"Ago","2025":293307.52,"2026":0},{"mes":"Set","2025":295579.96,"2026":0},{"mes":"Out","2025":301100.74,"2026":0},{"mes":"Nov","2025":293138.51,"2026":0},{"mes":"Dez","2025":304174.68,"2026":0}],"tipo":[{"label":"PJ","value":1304898.4299998549,"clientes":237},{"label":"PF","value":433443.1500000295,"clientes":754}],"clientes":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","atual":20922.820000000014,"anterior":21993.530000000108,"variacao":-4.868295357771529},{"cliente":"LONA CONSTRUTORA LTDA","atual":8529.929999999993,"anterior":8452.049999999994,"variacao":0.9214332617530571},{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","atual":7906.49999999997,"anterior":7906.499999999969,"variacao":1.150312656387696e-14},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","atual":7181.450000000016,"anterior":7124.730000000011,"variacao":0.7961003434516776},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","atual":6640.499999999983,"anterior":6525.499999999982,"variacao":1.7623170638265455},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","atual":6033.039999999987,"anterior":5686.629999999991,"variacao":6.091657097437266},{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","atual":5625.989999999998,"anterior":5625.989999999995,"variacao":4.8497848473224926e-14},{"cliente":"LEGACY IOT LTDA","atual":5501.859999999994,"anterior":4946.2999999999965,"variacao":11.231829852617068},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","atual":5495.499999999994,"anterior":5495.499999999994,"variacao":0.0},{"cliente":"STA MAQUINAS LTDA","atual":5364.019999999987,"anterior":5408.91999999999,"variacao":-0.8301102623075098},{"cliente":"ASSOCIACAO MULTIPLA DE PROTECAO E ASSISTENCIA AUT","atual":4478.749999999987,"anterior":4493.749999999987,"variacao":-0.33379694019471584},{"cliente":"IGREJA EVANGELICA ASSEMBLEIA DE DEUS - MINISTERIO VILA NOVA","atual":4258.400000000001,"anterior":4258.4000000000015,"variacao":-2.1357662543981963e-14},{"cliente":"LC ENCOMENDAS E CARGAS LTDA","atual":3797.720000000004,"anterior":3607.900000000004,"variacao":5.261232295795324},{"cliente":"ARMAZEM DA DECORACAO LTDA","atual":3670.040000000005,"anterior":3670.040000000005,"variacao":0.0},{"cliente":"BEAUVALLET GOIAS ALIMENTOS LTDA","atual":3592.009999999999,"anterior":3597.0299999999984,"variacao":-0.1395595810988379}],"topAno":[{"cliente":"LED WAVE PAINEIS ELETRONICOS LTDA","valor":123062.05999999827},{"cliente":"LONA CONSTRUTORA LTDA","valor":49543.740000000376},{"cliente":"METACOM SERVICOS EM TELECOMUNICACOES LTDA","valor":47468.99999999993},{"cliente":"URG UNIDADE RADIODONTOLOGICA DE GOIANIA SS LTDA","valor":42722.48999999972},{"cliente":"GABRIEL ARRAIS DE ALCANTARA NETO AUTO SOCORRO EIRELI","valor":39268.00000000075},{"cliente":"TENCEL ENGENHARIA EIRELI - EM RECUPERACAO JUDICIAL","valor":34716.220000000496},{"cliente":"PIRECAL PIRENOPOLIS CALCARIO LTDA","valor":33842.16000000036},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","valor":33008.250000000524},{"cliente":"STA MAQUINAS LTDA","valor":32967.26000000046},{"cliente":"LEGACY IOT LTDA","valor":29407.040000000223}],"anosDisponiveis":[2022,2023,2024,2025,2026],"historicoMensal":[{"ano":2022,"mesIndex":1,"mes":"Jan","valor":0},{"ano":2022,"mesIndex":2,"mes":"Fev","valor":0},{"ano":2022,"mesIndex":3,"mes":"Mar","valor":246671.5},{"ano":2022,"mesIndex":4,"mes":"Abr","valor":262021.72},{"ano":2022,"mesIndex":5,"mes":"Mai","valor":258016.26},{"ano":2022,"mesIndex":6,"mes":"Jun","valor":288972.03},{"ano":2022,"mesIndex":7,"mes":"Jul","valor":267621.76},{"ano":2022,"mesIndex":8,"mes":"Ago","valor":266434.99},{"ano":2022,"mesIndex":9,"mes":"Set","valor":300286.56},{"ano":2022,"mesIndex":10,"mes":"Out","valor":266416.41},{"ano":2022,"mesIndex":11,"mes":"Nov","valor":323109.05},{"ano":2022,"mesIndex":12,"mes":"Dez","valor":300648.05},{"ano":2023,"mesIndex":1,"mes":"Jan","valor":303755.04},{"ano":2023,"mesIndex":2,"mes":"Fev","valor":300018.77},{"ano":2023,"mesIndex":3,"mes":"Mar","valor":288150.65},{"ano":2023,"mesIndex":4,"mes":"Abr","valor":275642.2},{"ano":2023,"mesIndex":5,"mes":"Mai","valor":307737.82},{"ano":2023,"mesIndex":6,"mes":"Jun","valor":288005.79},{"ano":2023,"mesIndex":7,"mes":"Jul","valor":291626.13},{"ano":2023,"mesIndex":8,"mes":"Ago","valor":281416.64},{"ano":2023,"mesIndex":9,"mes":"Set","valor":248524.88},{"ano":2023,"mesIndex":10,"mes":"Out","valor":283119.62},{"ano":2023,"mesIndex":11,"mes":"Nov","valor":266026.69},{"ano":2023,"mesIndex":12,"mes":"Dez","valor":260561.65},{"ano":2024,"mesIndex":1,"mes":"Jan","valor":261911.42},{"ano":2024,"mesIndex":2,"mes":"Fev","valor":268771.73},{"ano":2024,"mesIndex":3,"mes":"Mar","valor":271565.27},{"ano":2024,"mesIndex":4,"mes":"Abr","valor":264474.15},{"ano":2024,"mesIndex":5,"mes":"Mai","valor":275352.52},{"ano":2024,"mesIndex":6,"mes":"Jun","valor":275229.59},{"ano":2024,"mesIndex":7,"mes":"Jul","valor":269316.09},{"ano":2024,"mesIndex":8,"mes":"Ago","valor":265232.32},{"ano":2024,"mesIndex":9,"mes":"Set","valor":260113.52},{"ano":2024,"mesIndex":10,"mes":"Out","valor":272203.47},{"ano":2024,"mesIndex":11,"mes":"Nov","valor":277852.67},{"ano":2024,"mesIndex":12,"mes":"Dez","valor":277605.04},{"ano":2025,"mesIndex":1,"mes":"Jan","valor":285068.26},{"ano":2025,"mesIndex":2,"mes":"Fev","valor":290122.67},{"ano":2025,"mesIndex":3,"mes":"Mar","valor":295603.36},{"ano":2025,"mesIndex":4,"mes":"Abr","valor":295704.02},{"ano":2025,"mesIndex":5,"mes":"Mai","valor":303486.02},{"ano":2025,"mesIndex":6,"mes":"Jun","valor":307472.77},{"ano":2025,"mesIndex":7,"mes":"Jul","valor":302378.3},{"ano":2025,"mesIndex":8,"mes":"Ago","valor":293307.52},{"ano":2025,"mesIndex":9,"mes":"Set","valor":295579.96},{"ano":2025,"mesIndex":10,"mes":"Out","valor":301100.74},{"ano":2025,"mesIndex":11,"mes":"Nov","valor":293138.51},{"ano":2025,"mesIndex":12,"mes":"Dez","valor":304174.68},{"ano":2026,"mesIndex":1,"mes":"Jan","valor":300481.43},{"ano":2026,"mesIndex":2,"mes":"Fev","valor":296775.48},{"ano":2026,"mesIndex":3,"mes":"Mar","valor":284840.28},{"ano":2026,"mesIndex":4,"mes":"Abr","valor":290894.64},{"ano":2026,"mesIndex":5,"mes":"Mai","valor":281116.43},{"ano":2026,"mesIndex":6,"mes":"Jun","valor":284233.32},{"ano":2026,"mesIndex":7,"mes":"Jul","valor":94296.07},{"ano":2026,"mesIndex":8,"mes":"Ago","valor":0},{"ano":2026,"mesIndex":9,"mes":"Set","valor":0},{"ano":2026,"mesIndex":10,"mes":"Out","valor":0},{"ano":2026,"mesIndex":11,"mes":"Nov","valor":0},{"ano":2026,"mesIndex":12,"mes":"Dez","valor":0}],"historicoAnual":[{"ano":2022,"valor":2780198.33,"variacao":null},{"ano":2023,"valor":3394585.88,"variacao":22.098695023674797},{"ano":2024,"valor":3239627.79,"variacao":-4.56485991157189},{"ano":2025,"valor":3567136.81,"variacao":10.109464457952438},{"ano":2026,"valor":1832637.65,"variacao":-48.62440810056848}]},"inad":{"kpis":{"total":217804.27,"mes":1209.99,"mesAnterior":21793.47,"varMes":-94.44792408001112,"pctMes":0.4257030808351392,"pctTotal":12.529428767388742,"clientes":556,"registros":1165,"refMonth":7,"refYear":2026},"mensal":[{"mes":"Fev","valor":17940.9},{"mes":"Mar","valor":6666.69},{"mes":"Abr","valor":5894.44},{"mes":"Mai","valor":14725.310000000001},{"mes":"Jun","valor":21793.47},{"mes":"Jul","valor":1209.99}],"empresa":[{"label":"GRITE ALTO","value":101563.38999999952,"count":502,"key":"GRITE ALTO"},{"label":"WICK GESTÃO","value":76422.08000000007,"count":384,"key":"WICK GESTÃO"},{"label":"MOVE","value":39818.80000000018,"count":279,"key":"MOVE"}],"tipo":[{"label":"PF","value":117696.94999999863,"count":1010,"key":"PF"},{"label":"PJ","value":100107.31999999993,"count":155,"key":"PJ"}],"aging":[{"label":"+90 dias","value":174181.05999999895},{"label":"1-30 dias","value":23003.460000000006},{"label":"31-60 dias","value":14725.31},{"label":"61-90 dias","value":5894.44}],"clientes":[{"cliente":"DOLP ENGENHARIA LTDA (MT)","valor":11065.6,"pct":5.080524821666719},{"cliente":"DOLP ENGENHARIA LTDA (GO)","valor":10778.57,"pct":4.948741363059595},{"cliente":"H HOUSE SERVICE LTDA","valor":7978.8,"pct":3.66328906223923},{"cliente":"QUEIROZ STORE LTDA","valor":7402.28,"pct":3.3985926905840733},{"cliente":"60.147.068 PEDRO HENRIQUE RIBEIRO DE QUELUZ","valor":5650.099999999999,"pct":2.5941181042961188},{"cliente":"GOLD MONTAGEM, INSTALACAO E LOCACAO LTDA","valor":5554.129999999999,"pct":2.550055607266102},{"cliente":"LEGACY IOT LTDA","valor":5501.86,"pct":2.526056996035936},{"cliente":"ANDERSON DE MAGALHAES PEREIRA DA SILVA","valor":5117.880000000001,"pct":2.3497610951337187},{"cliente":"XPM TRANSPORTE E SERVICOS LTDA","valor":4511.159999999999,"pct":2.071199063269053},{"cliente":"DINAMICA GOIAS ATACADO DISTRIBUIDORA LTDA","valor":3218.55,"pct":1.4777258499110235},{"cliente":"VEMAN MANUTENCAO E GESTAO DE ATIVOS LTDA","valor":2653.0,"pct":1.2180661104577977},{"cliente":"DAIANE MORAIS DE SOUZA","valor":2249.5,"pct":1.0328080344797648}]},"cancelados":{"kpis":{"total":1283,"valor":76400.57,"aPedido":805,"inad":478,"ticket":59.54837879968824,"qtdMes":13,"qtdMesAnterior":110,"varMes":-88.18181818181819,"refMonth":7,"refYear":2026,"custoTotal":25378.152,"custoIdentificados":775,"custoNaoIdentificados":508,"margemPerdida":51022.418000000005,"coberturaCustoPct":60.40530007794233,"operadoraNaoIdentificada":8,"valorOperadoraNaoIdentificada":433.62,"custoOperadoraNaoIdentificada":0.0},"mensal":[{"mes":"Fev","qtd":99,"valor":5468.12,"custo":2100.828,"aPedido":25,"inad":74},{"mes":"Mar","qtd":161,"valor":7847.37,"custo":934.068,"aPedido":22,"inad":139},{"mes":"Abr","qtd":21,"valor":1394.64,"custo":441.58799999999997,"aPedido":13,"inad":8},{"mes":"Mai","qtd":28,"valor":2400.09,"custo":1265.52,"aPedido":13,"inad":15},{"mes":"Jun","qtd":110,"valor":7841.16,"custo":2220.648,"aPedido":63,"inad":47},{"mes":"Jul","qtd":13,"valor":1237.79,"custo":440.88,"aPedido":2,"inad":11}],"motivos":[{"label":"A pedido","value":805,"valor":44220.720000000474,"custo":14806.835999999908},{"label":"Inadimplência","value":478,"valor":32179.850000000344,"custo":10571.315999999952}],"empresa":[{"label":"WICK GESTÃO","value":810,"valor":42250.460000000625,"custo":13041.407999999916},{"label":"GRITE ALTO","value":276,"valor":21894.980000000065,"custo":8682.035999999993},{"label":"MOVE","value":197,"valor":12255.129999999966,"custo":3654.708000000005}],"operadora":[{"label":"TIM","value":671,"valor":45317.97000000052,"custo":15991.307999999939},{"label":"VIVO","value":559,"valor":28176.800000000276,"custo":9136.187999999984},{"label":"CLARO","value":45,"valor":2472.1800000000003,"custo":250.65599999999998}],"planos":[{"label":"62981599000 VIVO 50GB CANCELADO","value":2,"valor":139.8,"custo":47.76},{"label":"62982630851 ROTEADOR 5G INTELBRAS ENGL","value":2,"valor":389.8,"custo":0.0},{"label":"62981851399 ROTEADOR 5G INTELBRAS ENGL","value":2,"valor":319.8,"custo":131.76},{"label":"98985261547 TIM ILIMITADO CANCELADO","value":1,"valor":189.9,"custo":44.28},{"label":"93981302068 TIM 10GB CANCELADO","value":1,"valor":49.9,"custo":0.0},{"label":"69981530047 TIM VOZ cancelado","value":1,"valor":29.9,"custo":27.48},{"label":"69981530001 TIM 1GB-cancelada 10-09-20","value":1,"valor":34.9,"custo":27.48},{"label":"67999646521 VIVO 10GB-cancelada 28/05/","value":1,"valor":69.9,"custo":31.08},{"label":"67992318839 TIM 50GB-CANCELADA 30-03-2","value":1,"valor":79.9,"custo":44.28},{"label":"67992279645 CLARO 80GB CANCELADO","value":1,"valor":186.9,"custo":0.0}],"recentes":[{"desc":"62982630851 ROTEADOR 5G INTELBRAS ENGL0702523LZ-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":199.9,"custo":0.0,"operadora":"TIM","empresa":"WICK GESTÃO"},{"desc":"62994102779 VIVO 30GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":103.9,"custo":23.88,"operadora":"VIVO","empresa":"WICK GESTÃO"},{"desc":"62994760797 TIM 50GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":69.9,"custo":44.28,"operadora":"TIM","empresa":"WICK GESTÃO"},{"desc":"62993216169 TIM 20GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":59.9,"custo":16.08,"operadora":"TIM","empresa":"WICK GESTÃO"},{"desc":"61984000041 TIM 50GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":79.9,"custo":0.0,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"66999533392 VIVO 1GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":29.9,"custo":23.88,"operadora":"VIVO","empresa":"GRITE ALTO"},{"desc":"66992410912 VIVO 1GB-cancelada 07/07/2026","motivo":"Inadimplência","data":"2026-07-07","valor":39.9,"custo":23.88,"operadora":"VIVO","empresa":"GRITE ALTO"},{"desc":"62984340100 500GB-cancelada 07-07-2026","motivo":"Inadimplência","data":"2026-07-07","valor":99.99,"custo":65.88,"operadora":"TIM","empresa":"MOVE"},{"desc":"62993073217 TIM 20GB-cancelada 01-07-2026","motivo":"A pedido","data":"2026-07-06","valor":59.9,"custo":33.48,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"67982150243 TIM ILIMITADO ROTEADOR 5G O9LM1200901YV-cancelada","motivo":"A pedido","data":"2026-07-02","valor":169.9,"custo":65.88,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"62982140299 ROTEADOR 5G INTELBRAS O9LM12008371B-CANCELADA 02-07-2026","motivo":"Inadimplência","data":"2026-07-02","valor":179.9,"custo":65.88,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"21983970664 TIM 50GB-CANCELADA 02-07-2026","motivo":"Inadimplência","data":"2026-07-02","valor":79.9,"custo":44.28,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"62999131135 TIM 20GB-cancelada 01/07/2026","motivo":"Inadimplência","data":"2026-07-01","valor":64.9,"custo":33.48,"operadora":"TIM","empresa":"MOVE"},{"desc":"62983000400 TIM 50GB-cancelado 30/06/2026","motivo":"Inadimplência","data":"2026-06-30","valor":79.9,"custo":44.28,"operadora":"TIM","empresa":"GRITE ALTO"},{"desc":"62991371020 TIM 50GB-cancelado 30/06/2026","motivo":"Inadimplência","data":"2026-06-30","valor":99.9,"custo":44.28,"operadora":"TIM","empresa":"WICK GESTÃO"}],"operadoraOutros":{"label":"Sem operadora identificada","value":8,"valor":433.62,"custo":0.0}}};
 
 let currentEmpresa = 'all';
 let currentOperadora = 'all';
@@ -3053,10 +3324,12 @@ function renderDiagnosis(prefix, cfg){
       let deltaHtmlTxt = '<div></div>';
       if(r.delta !== undefined){
         const d = Number(r.delta)||0;
-        const dCls = Math.abs(d) < 0.005 ? 'neutral' : (d >= 0 ? 'up' : 'down');
+        const dNeutral = Math.abs(d) < 0.005;
+        const dCls = dNeutral ? 'neutral' : (d > 0 ? 'up' : 'down');
+        const dArrow = dNeutral ? '■' : (d > 0 ? '▲' : '▼');
         const dVal = rankingDeltaMoney ? fmtBRLFull(Math.abs(d)) : fmtNum(Math.abs(d));
-        const dTip = r.deltaTip || `Impacto no período: ${d>=0?'aumento':'queda'} de ${dVal}. Valor exibido no ranking: ${String(r.value).replace(/<[^>]*>/g,'')}.`;
-        deltaHtmlTxt = `<div class="rdelta ${dCls} has-tip" title="${esc(dTip)}" data-tip="${esc(dTip)}">${d>=0?'▲':'▼'} ${dVal}</div>`;
+        const dTip = r.deltaTip || `Impacto no período: ${dNeutral?'manteve':d>0?'aumento':'queda'} de ${dVal}. Valor exibido no ranking: ${String(r.value).replace(/<[^>]*>/g,'')}.`;
+        deltaHtmlTxt = `<div class="rdelta ${dCls} has-tip" title="${esc(dTip)}" data-tip="${esc(dTip)}">${dArrow} ${dVal}</div>`;
       } else if(r.variable !== undefined){
         const vTip = r.variableTip || `Variável do ranking: ${String(r.variable).replace(/<[^>]*>/g,'')}. Valor exibido no ranking: ${String(r.value).replace(/<[^>]*>/g,'')}.`;
         deltaHtmlTxt = `<div class="rdelta neutral has-tip" title="${esc(vTip)}" data-tip="${esc(vTip)}">${r.variable}</div>`;
@@ -3255,7 +3528,7 @@ function deltaColor(delta, goodWhenUp=true){
 }
 function deltaHtml(delta, goodWhenUp=true){
   const s=deltaGood(delta,goodWhenUp);
-  const cls=s==='good'?'tt-good':s==='bad'?'tt-bad':'tt-warn';
+  const cls=s==='good'?'tt-good':s==='bad'?'tt-bad':'tt-neutral';
   return `<span class="${cls}">${deltaBadgeText(delta)}</span>`;
 }
 function variationValueHtml(delta, goodWhenUp=true){
@@ -3268,7 +3541,7 @@ function variationValueHtml(delta, goodWhenUp=true){
 
 function plainDeltaLabel(delta, goodWhenUp=true){
   const s = deltaGood(delta, goodWhenUp);
-  const cls = s === 'good' ? 'boa' : s === 'bad' ? 'negativa' : 'neutra';
+  const cls = s === 'good' ? 'boa' : s === 'bad' ? 'negativa' : 'estável';
   return `${deltaBadgeText(delta).replace(/<[^>]*>/g,'')} (${cls})`;
 }
 function signedMoney(v){
@@ -3292,10 +3565,10 @@ function buildVariationTip(row, opts){
   }
   const diff = current - previous;
   const money = opts.money !== false;
-  const direction = diff > 0 ? 'aumento' : diff < 0 ? 'queda' : 'estabilidade';
+  const direction = diff > 0 ? 'aumento' : diff < 0 ? 'queda' : 'estável';
   const reading = opts.goodWhenUp === false
-    ? (diff > 0 ? 'piora operacional/financeira' : diff < 0 ? 'melhora operacional/financeira' : 'sem mudança relevante')
-    : (diff > 0 ? 'crescimento positivo' : diff < 0 ? 'queda que exige atenção' : 'sem mudança relevante');
+    ? (diff > 0 ? 'piora operacional/financeira' : diff < 0 ? 'melhora operacional/financeira' : 'não houve aumento nem queda')
+    : (diff > 0 ? 'crescimento positivo' : diff < 0 ? 'queda que exige atenção' : 'não houve aumento nem queda');
   const currentTxt = money ? fmtBRLFull(current) : fmtNum(current);
   const previousTxt = money ? fmtBRLFull(previous) : fmtNum(previous);
   const diffTxt = money ? signedMoney(diff) : signedNum(diff);
@@ -4209,9 +4482,202 @@ function drawVendasAll(){
 // =====================================================================
 // FATURAMENTO
 // =====================================================================
+
+function variationClass(delta, goodWhenUp=true){
+  const s = deltaGood(delta, goodWhenUp);
+  return s === 'good' ? 'up' : s === 'bad' ? 'down' : 'flat';
+}
+
+function renderFatTopClientes(F){
+  const el = document.getElementById('fatTopTable');
+  if(!el) return;
+  const anoAtualRef = Number(F?.kpis?.anoAtualRef || new Date().getFullYear());
+  let data = Array.isArray(F?.topAno) ? F.topAno.filter(r=>r && r.cliente && Number(r.valor||0)>0) : [];
+
+  if(!data.length && Array.isArray(F?.clientes)){
+    data = F.clientes
+      .filter(r=>r && r.cliente && Number(r.atual||0)>0)
+      .map(r=>({cliente:r.cliente, valor:Number(r.atual||0)}))
+      .sort((a,b)=>Number(b.valor||0)-Number(a.valor||0))
+      .slice(0,10);
+  }
+
+  if(!data.length){
+    el.innerHTML = `<tr><td colspan="2" class="text-cell">Sem clientes faturados para o ano atual no dataset.</td></tr>`;
+    return;
+  }
+
+  el.innerHTML = data.slice(0,12).map((r,i)=>{
+    const cliente = String(r.cliente || 'Cliente não identificado');
+    const valor = Number(r.valor || 0);
+    const tip = `Cliente: ${cliente}\nAno: ${anoAtualRef}\nFaturamento acumulado: ${fmtBRLFull(valor)}`;
+    return `<tr>
+      <td class="text-cell has-tip" title="${esc(tip)}" data-tip="${esc(tip)}">${esc(cliente)}</td>
+      <td class="num money-cell has-tip" title="${esc(tip)}" data-tip="${esc(tip)}">${fmtBRLFull(valor)}</td>
+    </tr>`;
+  }).join('');
+  initDomTooltips(el);
+}
+
+function variationArrow(delta){
+  const n = Number(delta)||0;
+  if(Math.abs(n)<0.05) return '■';
+  return n>0 ? '▲' : '▼';
+}
+function renderFatOscillations(F, ranked){
+  const el = document.getElementById('fatOscillations');
+  if(!el) return;
+  const tag = document.getElementById('fatOscTag');
+  if(tag) tag.textContent = `${F.kpis.mesAtualLabel} vs ${F.kpis.mesAnteriorLabel}`;
+  const rowsBase = (F.clientes || []).map(c=>({...c,delta:(Number(c.atual)||0)-(Number(c.anterior)||0)}));
+  const altas = rowsBase.filter(c=>c.delta>0.005).sort((a,b)=>b.delta-a.delta).slice(0,5);
+  const baixas = rowsBase.filter(c=>c.delta<-0.005).sort((a,b)=>a.delta-b.delta).slice(0,5);
+  function item(c, mode){
+    const cls = mode === 'up' ? 'up' : 'down';
+    const tip = buildVariationTip(c,{money:true});
+    return `<div class="osc-row has-tip" data-tip="${esc(tip)}">
+      <div class="osc-name">${esc(c.cliente)}</div>
+      <div class="osc-var ${cls}">${variationArrow(c.variacao)} ${fmtPct(Math.abs(Number(c.variacao)||0))}</div>
+      <div class="osc-money">${fmtBRLFull(c.atual)}</div>
+    </div>`;
+  }
+  const empty = '<div class="chart-note">Sem oscilação relevante no período.</div>';
+  el.innerHTML = `
+    <div class="osc-col">
+      <div class="osc-title up"><span class="ico">▲</span>Maiores altas</div>
+      ${altas.length ? altas.map(c=>item(c,'up')).join('') : empty}
+    </div>
+    <div class="osc-col">
+      <div class="osc-title down"><span class="ico">▼</span>Maiores baixas</div>
+      ${baixas.length ? baixas.map(c=>item(c,'down')).join('') : empty}
+    </div>`;
+  initDomTooltips(el);
+}
+function fatHistoryMonthlyRows(F){
+  if(Array.isArray(F.historicoMensal) && F.historicoMensal.length) return F.historicoMensal;
+  const rows=[];
+  (F.mensal||[]).forEach((m,idx)=>{
+    Object.keys(m).filter(k=>/^\d{4}$/.test(k)).forEach(ano=>{
+      rows.push({ano:Number(ano),mesIndex:idx+1,mes:m.mes,valor:Number(m[ano]||0)});
+    });
+  });
+  return rows;
+}
+function fatHistoryAnnualRows(F){
+  if(Array.isArray(F.historicoAnual) && F.historicoAnual.length) return F.historicoAnual;
+  const monthly = fatHistoryMonthlyRows(F);
+  const map = {};
+  monthly.forEach(r=>{ map[r.ano]=(map[r.ano]||0)+Number(r.valor||0); });
+  const years = Object.keys(map).map(Number).sort((a,b)=>a-b);
+  let prev = null;
+  return years.map(y=>{ const valor=map[y]||0; const variacao=prev?((valor-prev)/prev*100):null; prev=valor; return {ano:y,valor,variacao}; });
+}
+function initFatHistoryFilters(F){
+  const ySel=document.getElementById('fatHistYearSelect');
+  const mSel=document.getElementById('fatHistMonthSelect');
+  if(!ySel || !mSel) return;
+  const years = fatHistoryAnnualRows(F).map(r=>r.ano).sort((a,b)=>a-b);
+  const selectedYear = String(ySel.value || F.kpis.anoAtualRef || years.at(-1) || new Date().getFullYear());
+  const selectedMonth = String(mSel.value || F.kpis.refMonth || 1);
+  const yOptions = years.map(y=>`<option value="${y}">${y}</option>`).join('');
+  if(ySel.dataset.options !== yOptions){
+    ySel.innerHTML = yOptions;
+    ySel.dataset.options = yOptions;
+  }
+  ySel.value = years.includes(Number(selectedYear)) ? selectedYear : String(years.at(-1)||F.kpis.anoAtualRef);
+  if(!mSel.dataset.ready){
+    mSel.innerHTML = monthLbl.map((m,i)=>`<option value="${i+1}">${m}</option>`).join('');
+    mSel.dataset.ready='1';
+  }
+  mSel.value = selectedMonth;
+  if(!ySel.dataset.bound){
+    ySel.addEventListener('change',()=>drawFatAll());
+    ySel.dataset.bound='1';
+  }
+  if(!mSel.dataset.bound){
+    mSel.addEventListener('change',()=>drawFatAll());
+    mSel.dataset.bound='1';
+  }
+}
+function renderFatHistory(F){
+  const panel=document.getElementById('fatHistoryPanel');
+  if(!panel) return;
+  initFatHistoryFilters(F);
+  const ySel=document.getElementById('fatHistYearSelect');
+  const mSel=document.getElementById('fatHistMonthSelect');
+  const year = Number(ySel?.value || F.kpis.anoAtualRef);
+  const month = Number(mSel?.value || F.kpis.refMonth);
+  const monthly = fatHistoryMonthlyRows(F).filter(r=>Number(r.valor||0) >= 0);
+  const annual = fatHistoryAnnualRows(F).filter(a=>Number(a.valor||0) > 0).sort((a,b)=>a.ano-b.ano);
+  const currentAnnual = annual.find(a=>a.ano===year) || {ano:year,valor:0,variacao:null};
+  const prevAnnual = annual.find(a=>a.ano===year-1) || {ano:year-1,valor:0};
+  const currentMonth = monthly.find(r=>r.ano===year && r.mesIndex===month) || {valor:0};
+  const prevMonth = monthly.find(r=>r.ano===year-1 && r.mesIndex===month) || {valor:0};
+  const sameMonthVar = prevMonth.valor ? ((currentMonth.valor-prevMonth.valor)/prevMonth.valor*100) : null;
+  const bestMonth = monthly.filter(r=>r.ano===year).sort((a,b)=>b.valor-a.valor)[0] || {mes:'—',valor:0};
+  const worstMonth = monthly.filter(r=>r.ano===year && r.valor>0).sort((a,b)=>a.valor-b.valor)[0] || {mes:'—',valor:0};
+
+  const anoParcial = year === Number(F.kpis.anoAtualRef) && Number(F.kpis.refMonth||12) < 12;
+  const anoSub = `${year}${anoParcial?' · parcial até '+(F.kpis.mesAtualLabel||'mês atual'):''} · ${currentAnnual.variacao===null?'sem ano anterior':plainDeltaLabel(currentAnnual.variacao)}`;
+  cards('fatHistoryCards', [
+    ['Ano selecionado', fmtBRLFull(currentAnnual.valor), anoSub],
+    ['Mesmo mês ano anterior', fmtBRLFull(currentMonth.valor), `${MES_MAP[month-1]} ${year} vs ${year-1}: ${sameMonthVar===null?'N/D':plainDeltaLabel(sameMonthVar)}`],
+    ['Melhor mês do ano', fmtBRLFull(bestMonth.valor), bestMonth.mes || '—'],
+    ['Menor mês positivo', fmtBRLFull(worstMonth.valor), worstMonth.mes || '—'],
+  ]);
+
+  const annualEl = document.getElementById('fatAnnualBars');
+  if(annualEl){
+    const maxAnnual = Math.max(1, ...annual.map(a=>Number(a.valor||0)));
+    annualEl.innerHTML = annual.map(a=>{
+      const pctWidth = Math.max(3, Number(a.valor||0)/maxAnnual*100);
+      const sem = deltaGood(a.variacao, true);
+      const cls = sem==='good'?'up':sem==='bad'?'down':'neutral';
+      const varTxt = a.variacao===null?'base':deltaBadgeText(a.variacao);
+      const tip = `Ano: ${a.ano}\nFaturamento: ${fmtBRLFull(a.valor)}\nVariação anual: ${a.variacao===null?'Base histórica':deltaBadgeText(a.variacao)}`;
+      return `<div class="history-bar has-tip" data-tip="${esc(tip)}"><b>${a.ano}</b><div class="history-track"><div class="history-fill" style="width:${pctWidth}%"></div></div><div class="history-money">${fmtBRLFull(a.valor)}</div><div class="history-var ${cls}">${varTxt}</div></div>`;
+    }).join('');
+    initDomTooltips(annualEl);
+  }
+
+  const monthEl = document.getElementById('fatMonthCompareBars');
+  const tag = document.getElementById('fatMonthCompareTag');
+  if(tag) tag.textContent = `${year} vs ${year-1}`;
+  if(monthEl){
+    const prevYear = year-1;
+    const rows = monthLbl.map((m,i)=>{
+      const mesIndex=i+1;
+      const atual = (monthly.find(r=>r.ano===year && r.mesIndex===mesIndex)?.valor)||0;
+      const anterior = (monthly.find(r=>r.ano===prevYear && r.mesIndex===mesIndex)?.valor)||0;
+      const variacao = anterior ? ((atual-anterior)/anterior*100) : (atual ? null : 0);
+      return {mes:m.slice(0,3), mesFull:m, atual, anterior, variacao};
+    });
+    const maxMonthVal = Math.max(1, ...rows.flatMap(r=>[r.atual,r.anterior]));
+    monthEl.innerHTML = rows.map(r=>{
+      const wPrev = r.anterior ? Math.max(2, r.anterior/maxMonthVal*100) : 0;
+      const wAtual = r.atual ? Math.max(2, r.atual/maxMonthVal*100) : 0;
+      const sem = deltaGood(r.variacao, true);
+      const cls = sem==='good'?'up':sem==='bad'?'down':'neutral';
+      const tip = `${r.mesFull}\n${prevYear}: ${fmtBRLFull(r.anterior)}\n${year}: ${fmtBRLFull(r.atual)}\nVariação: ${r.variacao===null?'N/D':deltaBadgeText(r.variacao)}`;
+      return `<div class="history-month-row has-tip" data-tip="${esc(tip)}"><b>${r.mes}</b><div class="history-month-bars"><div class="history-month-line prev"><div class="fill" style="width:${wPrev}%"></div><span>${prevYear} · ${fmtBRLFull(r.anterior)}</span></div><div class="history-month-line current"><div class="fill" style="width:${wAtual}%"></div><span>${year} · ${fmtBRLFull(r.atual)}</span></div></div><div class="history-var ${cls}">${r.variacao===null?'N/D':deltaBadgeText(r.variacao)}</div></div>`;
+    }).join('');
+    initDomTooltips(monthEl);
+  }
+}
+
+
 function drawFatAll(){
   const F = DATA.faturamento, k = F.kpis;
-  const realizados = F.mensal.filter(m=>Number(m['2026'])>0);
+  const anoAtualRef = Number(k.anoAtualRef || new Date().getFullYear());
+  const anoAnteriorRef = Number(k.anoAnteriorRef || (anoAtualRef-1));
+  const anoAtualKey = String(anoAtualRef);
+  const anoAnteriorKey = String(anoAnteriorRef);
+  const mesAtualLabel = k.mesAtualLabel || MES_FULL[(Number(k.refMonth)||6)-1] || 'Atual';
+  const mesAnteriorLabel = k.mesAnteriorLabel || MES_FULL[Math.max(0,(Number(k.refMonth)||6)-2)] || 'Anterior';
+  const statusVarMensal = deltaGood(k.varMensal,true);
+  const leituraVarMensal = statusVarMensal === 'neutral' ? 'manteve-se estável' : (Number(k.varMensal)>0 ? 'cresceu' : 'caiu');
+  const subtituloVariacaoMensal = statusVarMensal === 'neutral' ? 'estabilidade' : (Number(k.varMensal)>0 ? 'crescimento' : 'queda');
+  const realizados = F.mensal.filter(m=>Number(m[anoAtualKey])>0);
   const mesesFechados = Math.max(1, realizados.length);
   const mediaMensal = k.anoAtual / mesesFechados;
   const VendasBase = DATA.vendas || {mensal:[], kpis:{}};
@@ -4234,10 +4700,10 @@ function drawFatAll(){
   // Usa a média faturada de 2026 como base e aplica a sazonalidade do mesmo mês em 2025.
   // Assim, Jul-Dez não ficam repetidos; cada mês recebe um valor projetado próprio.
   const mediaSazonal2025 = F.mensal.slice(0, mesesFechados)
-    .reduce((a,m)=>a+Number(m['2025']||0),0) / Math.max(mesesFechados,1);
+    .reduce((a,m)=>a+Number(m[anoAnteriorKey]||0),0) / Math.max(mesesFechados,1);
   const projecaoMensal = F.mensal.map((m,i)=>{
-    if(i < mesesFechados) return Number(m['2026']||0);
-    const referencia2025 = Number(m['2025']||0);
+    if(i < mesesFechados) return Number(m[anoAtualKey]||0);
+    const referencia2025 = Number(m[anoAnteriorKey]||0);
     const fatorSazonal = mediaSazonal2025 ? (referencia2025 / mediaSazonal2025) : 1;
     return mediaMensal * fatorSazonal;
   });
@@ -4250,30 +4716,37 @@ function drawFatAll(){
   const receitaLiquidaProjetada = projecaoAnual - (riscoMedioMensal * 12);
   const mediaReceitaLiquidaMensal = receitaLiquidaProjetada / 12;
   const ritmoNecessario = mesesRestantes > 0 ? Math.max(0, (k.metaAnual - k.anoAtual) / mesesRestantes) : 0;
-  const ultimoRealizado = realizados.length ? Number(realizados[realizados.length-1]['2026']) : k.mesAtual;
+  const ultimoRealizado = realizados.length ? Number(realizados[realizados.length-1][anoAtualKey] || 0) : k.mesAtual;
   const projSeries = F.mensal.map((m,i)=> i === mesesFechados-1 ? ultimoRealizado : (i >= mesesFechados ? projecaoMensal[i] : null));
 
   const ticks = F.clientes.slice(0,10).map(r=>{
-    const cls = r.variacao>=0 ? 'up':'down';
-    const arrow = r.variacao>=0 ? '▲':'▼';
-    return `<div class="tick ${cls}" data-tip="${esc(buildVariationTip(r,{money:true}))}">${esc(r.cliente)} · ${fmtCompactBRL(r.atual)} ${arrow} ${fmtPct(Math.abs(r.variacao))}</div>`;
+    const semantic = deltaGood(Number(r.variacao)||0, true);
+    const cls = semantic==='good' ? 'up' : semantic==='bad' ? 'down' : 'flat';
+    const arrow = variationArrow(Number(r.variacao)||0);
+    const label = fmtPct(Math.abs(Number(r.variacao)||0));
+    const tip = buildVariationTip(r,{money:true});
+    return `<div class="tick ${cls} has-tip" title="${esc(tip)}" data-tip="${esc(tip)}">${esc(r.cliente)} · ${fmtBRLFull(r.atual)} ${arrow} ${label}</div>`;
   }).join('');
-  document.getElementById('ticker').innerHTML = ticks + ticks;
+  const tickerEl = document.getElementById('ticker');
+  if(tickerEl){
+    tickerEl.innerHTML = ticks + ticks;
+    initDomTooltips(tickerEl);
+  }
 
   const varComparavel = k.varAnualComparavel;
   const ranked = F.clientes.map(c=>({...c, delta: c.atual-c.anterior}))
     .sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta)).slice(0,5);
 
   renderDiagnosis('fat', {
-    resumo: `Diagnóstico financeiro: faturamento de Junho ficou em <b>${fmtCompactBRL(k.mesAtual)}</b>, estável vs Maio (${fmtPct(k.varMensal)}). `+
+    resumo: `Diagnóstico financeiro: faturamento de ${mesAtualLabel}/${anoAtualRef} ficou em <b>${fmtCompactBRL(k.mesAtual)}</b>, ${leituraVarMensal} vs ${mesAnteriorLabel} (${fmtPct(k.varMensal)}). `+
       `Pela média mensal realizada de <b>${fmtCompactBRL(mediaMensal)}</b> em ${fmtNum(mesesFechados)} meses fechados, a <b>projeção anual mês a mês</b> é de <b>${fmtCompactBRL(projecaoAnual)}</b>, usando sazonalidade de 2025 para os meses futuros. `+
       `A velocidade comercial média está em <b>${fmtNum(mediaLinhasVendidas)} linhas negociadas/mês</b>, com <b>${fmtCompactBRL(mediaValorVendas)}</b>/mês em valor negociado; o cenário líquido conservador fica em <b>${fmtCompactBRL(receitaLiquidaProjetada)}</b>. `+
-      `O comparável correto Jan–Jun/26 vs Jan–Jun/25 está em <span class="${varComparavel<0?'warn-txt':'good-txt'}">${fmtPct(varComparavel)}</span>. `+
+      `O comparável correto Jan–${MES_MAP[(Number(k.refMonth)||6)-1]?.slice(0,3)}/${String(anoAtualRef).slice(2)} vs Jan–${MES_MAP[(Number(k.refMonth)||6)-1]?.slice(0,3)}/${String(anoAnteriorRef).slice(2)} está em <span class="${varComparavel<0?'warn-txt':'good-txt'}">${fmtPct(varComparavel)}</span>. `+
       `Para bater a meta anual de ${fmtCompactBRL(k.metaAnual)}, o ritmo necessário nos próximos ${fmtNum(mesesRestantes)} meses é de <b>${fmtCompactBRL(ritmoNecessario)}/mês</b>.`,
-    atual: {label:'Faturamento — Junho', value: fmtCompactBRL(k.mesAtual)},
-    anterior: {label:'Faturamento — Maio', value: fmtCompactBRL(k.mesAnterior)},
+    atual: {label:'Faturamento — '+mesAtualLabel+'/'+anoAtualRef, value: fmtCompactBRL(k.mesAtual)},
+    anterior: {label:'Faturamento — '+mesAnteriorLabel+'/'+anoAtualRef, value: fmtCompactBRL(k.mesAnterior)},
     variacao: {pct: k.varMensal, goodWhenUp:true, label:'Variação positiva/negativa', nota:'mês a mês · projeção anual: '+fmtCompactBRL(projecaoAnual)},
-    rankingTitle: 'Ranking de impacto — maiores variações em R$ (Jun vs Mai)',
+    rankingTitle: 'Ranking de impacto — maiores variações em R$ ('+mesAtualLabel+' vs '+mesAnteriorLabel+')',
     rankingDeltaMoney: true,
     ranking: ranked.map(r=>({label:r.cliente, value: fmtCompactBRL(r.atual), delta: r.delta, deltaTip:`Atual: ${fmtBRLFull(r.atual)}\nAnterior: ${fmtBRLFull(r.anterior)}\nDiferença: ${signedMoney(r.delta)}\nVariação: ${deltaBadgeText(r.variacao)}.`})),
     acao: {
@@ -4285,11 +4758,11 @@ function drawFatAll(){
   });
 
   cards('fatCards', [
-    ['Mês atual', fmtCompactBRL(k.mesAtual), (k.mesAtualLabel||'Junho')+'/2026'],
-    ['Mês anterior', fmtCompactBRL(k.mesAnterior), (k.mesAnteriorLabel||'Maio')+'/2026'],
-    ['Variação mensal', variationValueHtml(k.varMensal,true), k.varMensal>=0?'crescimento':'queda'],
+    ['Mês atual', fmtCompactBRL(k.mesAtual), mesAtualLabel+'/'+anoAtualRef],
+    ['Mês anterior', fmtCompactBRL(k.mesAnterior), mesAnteriorLabel+'/'+anoAtualRef],
+    ['Variação mensal', variationValueHtml(k.varMensal,true), subtituloVariacaoMensal],
     ['Meta mensal', fmtCompactBRL(k.metaMensal), fmtPct(k.alcancadoMensal)+' alcançado'],
-    ['Ano atual (YTD)', fmtCompactBRL(k.anoAtual), `Jan–${realizados[realizados.length-1]?.mes || 'Jun'}/2026`],
+    ['Ano atual (YTD)', fmtCompactBRL(k.anoAtual), `Jan–${realizados[realizados.length-1]?.mes || MES_MAP[(Number(k.refMonth)||6)-1]?.slice(0,3) || 'Atual'}/${anoAtualRef}`],
     ['Projeção anual', fmtCompactBRL(projecaoAnual), 'realizado + projeção mês a mês'],
     ['Média de vendas', fmtNum(mediaLinhasVendidas), 'linhas negociadas/mês'],
     ['Cenário líquido', fmtCompactBRL(receitaLiquidaProjetada), 'projeção menos riscos médios'],
@@ -4312,9 +4785,9 @@ function drawFatAll(){
       <div class="projection-grid projection-grid-monthly">
         ${F.mensal.slice(mesesFechados).map((m,idx)=>`
           <div class="projection-metric">
-            <span>${esc(m.mes)}/2026</span>
+            <span>${esc(m.mes)}/${anoAtualRef}</span>
             <strong>${fmtCompactBRL(projecaoMensal[mesesFechados+idx])}</strong>
-            <small>ref. 2025: ${fmtCompactBRL(m['2025'])}</small>
+            <small>ref. ${anoAnteriorRef}: ${fmtCompactBRL(m[anoAnteriorKey])}</small>
           </div>`).join('')}
       </div>
 
@@ -4330,13 +4803,25 @@ function drawFatAll(){
       <div class="chart-note">Fórmula do cenário líquido: projeção anual mês a mês ${fmtCompactBRL(projecaoAnual)} − caixa em risco anual ${fmtCompactBRL(caixaEmRiscoAnual)} − MRR perdido anualizado ${fmtCompactBRL(mrrPerdidoProjetado)}. É uma visão gerencial conservadora, não DRE contábil.</div>`;
   }
   lineChart('fatChart', F.mensal.map(m=>m.mes), [
-    {name:'Faturamento 2025', values:F.mensal.map(m=>m['2025']), color:'#7c8aa3', dashed:true, money:true, note:'Ano anterior usado como referência.'},
-    {name:'Faturamento 2026', values:F.mensal.map((m,i)=>i<mesesFechados?m['2026']:null), compareValues:F.mensal.map(m=>m['2025']), color:C.blue, area:true, money:true, showVariation:true, goodWhenUp:true, variationNote:'Variação mês a mês de 2026; no tooltip também aparece o comparável 2025.'},
-    {name:'Projeção 2026', values:projSeries, color:C.yellow, dashed:true, money:true, note:'Linha projetada mês a mês pela média de 2026 ajustada pela sazonalidade de 2025.'},
+    {name:'Faturamento '+anoAnteriorRef, values:F.mensal.map(m=>m[anoAnteriorKey]), color:'#7c8aa3', dashed:true, money:true, note:'Ano anterior usado como referência.'},
+    {name:'Faturamento '+anoAtualRef, values:F.mensal.map((m,i)=>i<mesesFechados?m[anoAtualKey]:null), compareValues:F.mensal.map(m=>m[anoAnteriorKey]), color:C.blue, area:true, money:true, showVariation:true, goodWhenUp:true, variationNote:'Variação mês a mês de 2026; no tooltip também aparece o comparável 2025.'},
+    {name:'Projeção '+anoAtualRef, values:projSeries, color:C.yellow, dashed:true, money:true, note:'Linha projetada mês a mês pela média de 2026 ajustada pela sazonalidade de 2025.'},
   ]);
   donutChart('fatTipoChart', F.tipo.map(t=>t.label), F.tipo.map(t=>t.value), [C.blue, C.wick], {tooltipTitle:'Faturamento por tipo', money:true, center:fmtCompactBRL(F.tipo.reduce((a,t)=>a+t.value,0)), centerSub:'total'});
-  rows('fatTable', F.clientes, [{key:'cliente',label:'Cliente completo'},{key:'atual',money:1,label:'Valor atual'},{key:'anterior',money:1,label:'Valor anterior'},{key:'variacao',cls:'trend'}]);
-  rows('fatTopTable', F.topAno, [{key:'cliente',label:'Cliente completo'},{key:'valor',money:1,label:'Faturamento'}]);
+  renderFatOscillations(F, ranked);
+  renderFatTopClientes(F);
+  try{
+    renderFatHistory(F);
+  }catch(err){
+    console.error('Erro ao renderizar Histórico de Faturamento:', err);
+    const hist = document.getElementById('fatHistoryPanel');
+    if(hist && !hist.dataset.historyErrorShown){
+      hist.dataset.historyErrorShown = '1';
+      const msg = err && err.message ? err.message : String(err);
+      hist.insertAdjacentHTML('beforeend', `<div class="chart-note">Histórico de faturamento não renderizado nesta execução. Motivo técnico: ${esc(msg)}</div>`);
+    }
+  }
+  renderFatTopClientes(F);
   initDomTooltips(document.getElementById('faturamento'));
 }
 
@@ -4580,7 +5065,7 @@ if(themeToggle){
   themeToggle.addEventListener('click', ()=>applyTheme(document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
 }
 
-document.getElementById('upd').textContent = DATA.meta.updated;
+const updEl = document.querySelector('#upd'); if(updEl) updEl.textContent = DATA.meta.updated;
 document.getElementById('periodPill').textContent = periodoBase('vendas');
 syncHeaderTabState();
 initVendasMonthFilter();
@@ -4692,5 +5177,13 @@ Status: JavaScript validado sem erro; IDs e containers conferidos; dados princip
 <!-- Correção TI: valores financeiros completos e custo de cancelamentos por linha/BAZONA; operadoras de cancelamento padronizadas para TIM/VIVO/CLARO. -->
 <!-- Correção TI: tooltips financeiros nos cancelamentos mostram receita perdida, custo mensal e impacto líquido. -->
 <!-- Correção TI: donut center responsivo para valores financeiros completos com centavos dentro do círculo. -->
+<!-- Modificações executadas: meta mensal 300k, sidebar limpa, variação estável azul, painel de oscilações e histórico de faturamento. -->
+<!-- Revisão final aba a aba: Faturamento dinâmico por ano/mês, variação neutra azul e histórico parcial sinalizado. -->
+<!-- Correção CEO PRO: histórico faturamento em barras DOM, meta anual 12x meta mensal e variação estável azul sem texto manteve no ticker. -->
+<!-- Correção TI: ticker com tooltip e top clientes robusto no Faturamento. -->
+<!-- Correção TI: histórico faturamento visível e sair hover claro. -->
+<!-- Correção TI: MES_MAP objeto tratado corretamente como monthLbl array no histórico de faturamento. -->
+<!-- Correção TI: ticker de faturamento com cores sem pintura exclusiva no neutro. -->
+<!-- Correção TI: redução global de negrito em todas as abas. -->
 </body>
 </html>
